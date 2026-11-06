@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0.0",
+  "languages": ["zh", "ja", "en"],
+  "default_language": "zh",
+  "disclaimer": {
+    "zh": "本 Skill 与相关工具仅提供技术参考，不构成维修结论。因技术判断错误、误操作或依据本资料作出决定而造成的设备损坏、人身伤害或经济损失，提供者不承担任何责任。实际故障请由具备资质的人员结合官方手册与实测数据自行判断。",
+    "ja": "本 Skill および関連ツールは技術参考資料のみを提供し、修理上の結論を示すものではありません。技術的判断の誤り、誤操作、または本資料に基づく判断により生じた機器の損傷、人身事故、経済的損失について、提供者は一切の責任を負いません。実際の故障は、資格を有する技術者が公式サービスマニュアルと実測データに基づき自ら判断してください。",
+    "en": "This Skill and the accompanying tools provide technical reference only and do not constitute a repair diagnosis. The provider accepts no liability for equipment damage, personal injury, or financial loss arising from incorrect technical judgement, misuse, or decisions based on this material. Actual faults must be assessed independently by qualified personnel using the official service manual and measured data."
+  },
+  "labels": {
+    "coverage_manual": {"zh": "手册原文", "ja": "マニュアル原文", "en": "Verbatim manual"},
+    "coverage_derived": {"zh": "派生推理", "ja": "派生推論", "en": "Derived inference"},
+    "coverage_not_in_manual": {"zh": "手册未覆盖", "ja": "マニュアル未記載", "en": "Not in manual"},
+    "answer_language": {"zh": "回答语言", "ja": "回答言語", "en": "Answer language"}
+  },
+  "instructions": {
+    "zh": "Icom IC-7300 维修辅助。支持中文/日文/英文提问并自动以同语言回答。技术标识（位号、料号、页码、手册原文引用）保持原样。coverage=derived 为派生推理，not_in_manual 表示手册未覆盖，不得猜测数值。仅提供技术参考，实际故障请自行判断。",
+    "ja": "Icom IC-7300 保守支援。日本語・中国語・英語の質問を自動判別し、同じ言語で回答します。部品番号・型番・ページ番号・マニュアル原文は翻訳せず保持します。coverage=derived は派生推論、not_in_manual はマニュアル未記載です。数値を推測で補わないでください。技術参考のみを提供し、実際の故障判断は利用者が行ってください。",
+    "en": "Icom IC-7300 service assistant. Accepts Chinese, Japanese and English questions and replies in the same language. Designators, part numbers, page numbers and verbatim manual quotes are never translated. coverage=derived marks inference; not_in_manual marks data absent from the manual (never guess values). Technical reference only; the user is responsible for the actual fault diagnosis."
+  },
+  "notices": {
+    "empty_symptom": {"zh": "symptom 不能为空", "ja": "symptom を指定してください", "en": "symptom is required"},
+    "empty_ref": {"zh": "ref 不能为空", "ja": "ref を指定してください", "en": "ref is required"},
+    "empty_keyword": {"zh": "keyword 不能为空", "ja": "keyword を指定してください", "en": "keyword is required"},
+    "empty_query": {"zh": "query 不能为空", "ja": "query を指定してください", "en": "query is required"},
+    "invalid_direction": {"zh": "direction 必须是 RX 或 TX", "ja": "direction は RX または TX を指定してください", "en": "direction must be RX or TX"},
+    "diagnose_no_match": {"zh": "未匹配到故障现象：{q}。可用现象见 list_fault_symptoms 或 search_all。", "ja": "故障現象に一致しません：{q}。list_fault_symptoms または search_all をご利用ください。", "en": "No matching symptom: {q}. See list_fault_symptoms or search_all."},
+    "diagnose_derived": {"zh": "故障树为派生知识（coverage=derived）：手册本身没有 troubleshooting 章节。", "ja": "故障ツリーは派生知識（coverage=derived）です。マニュアルには troubleshooting の章がありません。", "en": "The fault tree is derived knowledge (coverage=derived); the manual has no troubleshooting section."},
+    "diagnose_no_voltage": {"zh": "手册未给出测试点正常电压/波形，排查步骤不含电压阈值判断；详见 list_manual_gaps。", "ja": "マニュアルにはテストポイントの正常電圧・波形が記載されていません。手順に電圧しきい値判定は含みません。list_manual_gaps を参照してください。", "en": "The manual gives no normal test-point voltages or waveforms; steps contain no voltage thresholds. See list_manual_gaps."},
+    "lookup_not_found": {"zh": "§5 元件表中没有位号 {ref}；不做模糊猜测。", "ja": "§5 部品表に {ref} はありません。あいまいな推測は行いません。", "en": "Designator {ref} is not in the SECTION 5 parts list; no fuzzy guess is made."},
+    "lookup_nearby_hint": {"zh": "nearby_refs 仅为同前缀示例，不是目标位号，不可当作查询结果使用。", "ja": "nearby_refs は同接頭辞の例示であり、検索結果として使用しないでください。", "en": "nearby_refs are same-prefix examples only, not the requested designator; do not treat them as results."},
+    "lookup_ambiguous": {"zh": "位号 {ref} 在 {n} 块板上复用，结果已全部返回；请传 board 参数消歧。", "ja": "位番 {ref} は {n} 枚の基板で共用されています。全件を返します。board を指定して絞り込んでください。", "en": "Designator {ref} is reused on {n} boards; all matches are returned. Pass board to disambiguate."},
+    "lookup_no_schematic": {"zh": "{key}: 原理图页码未自动回填（跨板复用或图纸文字层歧义），请查 ref_page_index.json 或翻阅 §10 对应板章节。", "ja": "{key}: 回路図ページは自動付与されていません（基板間共用または文字レイヤの曖昧さ）。ref_page_index.json または §10 を参照してください。", "en": "{key}: schematic page was not auto-filled (board reuse or ambiguous text layer); see ref_page_index.json or SECTION 10."},
+    "nearby_prefix": {"zh": "nearby_refs: {refs}", "ja": "nearby_refs: {refs}", "en": "nearby_refs: {refs}"},
+    "circuit_no_match": {"zh": "信号链中未找到 {q}；可改用 search_all 检索元件/网络。", "ja": "信号経路に {q} が見つかりません。search_all で部品・ネットを検索してください。", "en": "{q} not found in the signal chain; try search_all for components or nets."},
+    "circuit_derived": {"zh": "阶段划分与顺序为派生整理，节点与位号引自 §3 手册原文。", "ja": "段階の区分と順序は派生整理です。ノードと位番は §3 の原文に基づきます。", "en": "Stage grouping and order are a derived arrangement; nodes and designators come from SECTION 3."},
+    "trace_derived": {"zh": "信号链顺序为派生整理；依据 §3 电路描述与 §9 框图。", "ja": "信号経路の順序は派生整理です。§3 の回路説明と §9 のブロック図に基づきます。", "en": "Signal-chain order is a derived arrangement based on SECTION 3 and the SECTION 9 block diagram."},
+    "measurements_traceable": {"zh": "数值均附手册原文与页码；电源网络标签的标称值由名称推断，不是实测值。", "ja": "数値にはすべてマニュアル原文とページを付けています。電源ネット名から推定した公称値は実測値ではありません。", "en": "Every value carries a verbatim quote and page. Nominal values inferred from power-net names are not measured values."},
+    "measurements_gap": {"zh": "结果含 coverage=not_in_manual 项：手册未给出正常电压/波形，value 保持为 null，不填推断值。", "ja": "coverage=not_in_manual を含みます。正常電圧・波形は未記載のため value は null のままです。", "en": "Results include coverage=not_in_manual items: normal voltage/waveform is absent, value stays null, no inferred figures."},
+    "nets_inferred": {"zh": "这些是原理图/接线图上的电源或信号网络标签，标称电压由名称推断；手册未给出实测值、允差或测量条件。", "ja": "これらは回路図・配線図上の電源／信号ネット名です。公称電圧は名称からの推定で、実測値・許容差・測定条件は未記載です。", "en": "These are power/signal net labels from the diagrams. Nominal voltages are inferred from names; no measured values, tolerances or test conditions are given."},
+    "adjustment_table": {"zh": "§4 表格为多栏排版，数值须结合该页完整表格阅读；本工具只返回能在原文中定位的字面量。", "ja": "§4 の表は複数欄構成です。数値は該当ページの表全体と合わせて読んでください。原文で確認できる値のみ返します。", "en": "SECTION 4 tables are multi-column; read values together with the full table. Only literals located in the source text are returned."},
+    "page_ref_note": {"zh": "页码为 PDF 物理页号，与手册内印刷页码（如 10-4）不同。", "ja": "ページ番号は PDF の物理ページです。マニュアル印刷ページ（例 10-4）とは異なります。", "en": "Page numbers are physical PDF pages, not the printed labels such as 10-4."},
+    "page_how_to": {"zh": "打开手册 PDF 第 {a}-{b} 页（物理页号）", "ja": "マニュアル PDF の {a}〜{b} ページ（物理ページ）を開いてください", "en": "Open physical PDF pages {a}-{b} of the manual"},
+    "gaps_instruction": {"zh": "遇到这些请求时应明确回答「手册未覆盖」，不得猜测数值。", "ja": "これらの項目は「マニュアル未記載」と明記し、数値を推測しないでください。", "en": "For these requests state explicitly that the manual does not cover the data; never guess values."},
+    "faults_derived": {"zh": "全部故障树条目均为派生知识，实际故障请自行判断。", "ja": "故障ツリーはすべて派生知識です。実際の故障判断は利用者が行ってください。", "en": "All fault-tree entries are derived knowledge; the user is responsible for the actual diagnosis."},
+    "search_no_match": {"zh": "未检索到 {q}。中文长句建议改用较短关键词或 diagnose。", "ja": "{q} は見つかりませんでした。長い文ではなく短いキーワードまたは diagnose をお試しください。", "en": "No match for {q}. Try a shorter keyword or diagnose."},
+    "search_hint": {"zh": "全文结果为线索，请用对应实体工具获取带页码原文的精确结果。", "ja": "全文検索は手がかりです。対応するツールでページ番号付き原文を取得してください。", "en": "Full-text hits are leads; use the entity tools to obtain exact results with page-level quotes."},
+    "unknown_tool": {"zh": "未知工具：{name}", "ja": "未知のツール：{name}", "en": "Unknown tool: {name}"}
+  },
+  "tool_descriptions": {
+    "diagnose": {"zh": "故障现象 → 故障区域 → 电路/元件级排查步骤（派生知识，附手册原文证据）", "ja": "故障現象 → 疑わしい領域 → 回路／部品レベルの切り分け手順（派生知識、マニュアル原文の証拠付き）", "en": "Symptom -> suspect regions -> circuit/component-level steps (derived knowledge, with verbatim manual evidence)"},
+    "lookup_component": {"zh": "按元件位号精确查询（等值匹配，Q1001 不会命中 Q1002）", "ja": "部品位番を完全一致で検索（Q1001 が Q1002 に一致することはありません）", "en": "Exact designator lookup (equality match; Q1001 never matches Q1002)"},
+    "find_circuit": {"zh": "按关键词定位信号链中的电路模块", "ja": "キーワードから信号経路上の回路ブロックを特定", "en": "Locate a circuit stage in the signal chain by keyword"},
+    "trace_signal": {"zh": "输出 RX 或 TX 完整信号链", "ja": "RX または TX の完全な信号経路を出力", "en": "Return the complete RX or TX signal chain"},
+    "get_measurements": {"zh": "查询测试点/电源规格/调整目标值；未覆盖项返回 null", "ja": "テストポイント／電源仕様／調整目標値を検索。未記載項目は null", "en": "Query test points / supply specs / adjustment targets; uncovered items return null"},
+    "get_net_labels": {"zh": "查询电源网络标签（标称值由名称推断，非实测）", "ja": "電源ネット名を検索（公称値は名称からの推定で実測値ではない）", "en": "Query power-net labels (nominal values inferred from names, not measured)"},
+    "get_adjustment": {"zh": "查询 §4 调整程序中的目标值", "ja": "§4 調整手順の目標値を検索", "en": "Query target values from the SECTION 4 adjustment procedure"},
+    "get_page_ref": {"zh": "章节 → PDF 物理页码范围", "ja": "章 → PDF 物理ページ範囲", "en": "Section -> physical PDF page range"},
+    "list_manual_gaps": {"zh": "列出手册未覆盖的数据项", "ja": "マニュアル未記載の項目一覧", "en": "List data items not covered by the manual"},
+    "list_fault_symptoms": {"zh": "列出支持的故障现象（中日英）", "ja": "対応する故障現象の一覧（日・中・英）", "en": "List supported symptoms (JA / ZH / EN)"},
+    "search_all": {"zh": "跨实体全文检索", "ja": "全エンティティ横断の全文検索", "en": "Full-text search across all entities"}
+  },
+  "gaps": {
+    "no_troubleshooting_section": {
+      "item": {"zh": "故障现象排查表 / 故障树", "ja": "故障現象別の切り分け表／故障ツリー", "en": "Symptom troubleshooting table / fault tree"},
+      "detail": {"zh": "全册检索 trouble/symptom/fault/failure 命中 0；§1-§10 无 troubleshooting 章节。故障树由本工具基于 §3/§9 信号链派生。", "ja": "全文検索で trouble/symptom/fault/failure の一致は 0 件、§1〜§10 に troubleshooting の章はありません。故障ツリーは §3/§9 の信号経路から本ツールが派生生成したものです。", "en": "Zero matches for trouble/symptom/fault/failure across the manual; no troubleshooting section in SECTIONS 1-10. The fault tree is derived from the SECTION 3/9 signal chains."}
+    },
+    "no_dc_voltage_table": {
+      "item": {"zh": "元件级 DC 测试点电压表", "ja": "部品レベルの DC テストポイント電圧表", "en": "Component-level DC test-point voltage table"},
+      "detail": {"zh": "§10 检查点 CP* 仅标位号或 SHORT，手册未给出任何正常电压值。", "ja": "§10 のチェックポイント CP* には位番または SHORT の表記のみで、正常電圧値は一切記載されていません。", "en": "SECTION 10 CP* check points carry only a designator or SHORT; no normal voltage is given."}
+    },
+    "no_waveform_data": {
+      "item": {"zh": "测试点波形 / 示波器截图", "ja": "テストポイント波形／オシロスコープ画面", "en": "Test-point waveforms / oscilloscope captures"},
+      "detail": {"zh": "§10 原理图为静态图纸，无波形图、无时序图。", "ja": "§10 の回路図は静的な図面で、波形図・タイミング図はありません。", "en": "SECTION 10 schematics are static drawings; no waveforms or timing diagrams."}
+    },
+    "no_net_tolerance": {
+      "item": {"zh": "电源网络允差与实测条件", "ja": "電源ネットの許容差と測定条件", "en": "Power-net tolerances and measurement conditions"},
+      "detail": {"zh": "§8-§10 仅有电源网络标签（14V/8V/5V/3R3V 等），无允差、无测量条件。", "ja": "§8〜§10 には電源ネット名（14V/8V/5V/3R3V 等）のみで、許容差・測定条件はありません。", "en": "SECTIONS 8-10 contain only net labels (14V/8V/5V/3R3V etc.); no tolerances or test conditions."}
+    },
+    "no_tuner_ref_voltage_value": {
+      "item": {"zh": "天调参考电压调整目标值", "ja": "アンテナチューナー基準電圧の調整目標値", "en": "Tuner reference voltage adjustment target"},
+      "detail": {"zh": "§4-6 列出 TUNER REFERENCE VOLTAGE ADJUSTMENT 项目，但 VALUE 栏无具体电压数值。", "ja": "§4-6 に TUNER REFERENCE VOLTAGE ADJUSTMENT の項目はありますが、VALUE 欄に電圧値はありません。", "en": "SECTION 4-6 lists TUNER REFERENCE VOLTAGE ADJUSTMENT, but the VALUE column has no voltage figure."}
+    },
+    "no_component_function_per_ref": {
+      "item": {"zh": "逐位号的功能说明", "ja": "位番ごとの機能説明", "en": "Per-designator functional description"},
+      "detail": {"zh": "§5 提供料号/规格/坐标，未逐件标注所属功能电路；电路归属由 §3/§10 交叉定位。", "ja": "§5 は型番・仕様・座標のみで、各部品の機能回路は記載されていません。回路の所属は §3/§10 で突き合わせます。", "en": "SECTION 5 gives part numbers, specs and coordinates but not functional circuit assignments; cross-reference SECTIONS 3/10."}
+    },
+    "no_location_for_all": {
+      "item": {"zh": "全部元件的板坐标", "ja": "全ての部品の基板座標", "en": "Board coordinates for every component"},
+      "detail": {"zh": "§5 中 131 行无 LOCATION 坐标（VR/RIT/SD 等小板与机械件）。", "ja": "§5 の 131 行には LOCATION 座標がありません（VR/RIT/SD 等の小基板・機構部品）。", "en": "131 rows in SECTION 5 have no LOCATION coordinates (VR/RIT/SD sub-boards and mechanical parts)."}
+    },
+    "ambiguous_designator_reuse": {
+      "item": {"zh": "位号跨板复用消歧", "ja": "基板間で共用される位番の識別", "en": "Disambiguation of designators reused across boards"},
+      "detail": {"zh": "362 个位号在多块板上复用（如 R1、J1），查询必须结合板名；工具对跨板页命中不做猜测性回填。", "ja": "362 個の位番が複数基板で共用されています（R1、J1 等）。検索には基板名が必要です。基板間で曖昧なページ命中は推測で補完しません。", "en": "362 designators are reused across boards (e.g. R1, J1); queries must include the board name. Ambiguous cross-board page hits are never guessed."}
+    }
+  },
+  "signal_stages": {
+    "RX:1": {"zh": "ANT / 天调 / PA 滤波与 SWR 检测", "ja": "ANT／チューナー／PA フィルタと SWR 検出", "en": "ANT / tuner / PA filters and SWR detection"},
+    "RX:2": {"zh": "RF UNIT 输入保护、衰减与波段滤波", "ja": "RF UNIT 入力保護・減衰器・バンドフィルタ", "en": "RF UNIT input protection, attenuator and band filters"},
+    "RX:3": {"zh": "RF UNIT 前置放大后送 MAIN UNIT", "ja": "RF UNIT 前置増幅から MAIN UNIT へ", "en": "RF UNIT preamp feed to MAIN UNIT"},
+    "RX:4": {"zh": "MAIN UNIT TX/RX 切换与外部 AGC 衰减", "ja": "MAIN UNIT TX/RX 切替と外部 AGC 減衰", "en": "MAIN UNIT TX/RX switching and external AGC attenuation"},
+    "RX:5": {"zh": "A/D 转换与 FPGA 下变频为 36 kHz IF", "ja": "A/D 変換と FPGA による 36 kHz IF へのダウンコンバート", "en": "A/D conversion and FPGA down-conversion to 36 kHz IF"},
+    "RX:6": {"zh": "DSP 解调 / 降噪 / 静噪", "ja": "DSP 復調／ノイズ低減／スケルチ", "en": "DSP demodulation / noise reduction / squelch"},
+    "RX:7": {"zh": "D/A 转换与 AF 放大", "ja": "D/A 変換と AF 増幅", "en": "D/A conversion and AF amplification"},
+    "RX:8": {"zh": "扬声器 LPF / 切换输出", "ja": "スピーカー LPF／切替出力", "en": "Speaker LPF / output switching"},
+    "TX:1": {"zh": "MIC / ACC 输入、MIC AMP 与 A/D 转换", "ja": "MIC／ACC 入力、MIC AMP と A/D 変換", "en": "MIC / ACC input, MIC amp and A/D conversion"},
+    "TX:2": {"zh": "DSP 调制为 36 kHz TX IF", "ja": "DSP による 36 kHz TX IF 変調", "en": "DSP modulation to 36 kHz TX IF"},
+    "TX:3": {"zh": "FPGA 上变频与 D/A 转换", "ja": "FPGA アップコンバートと D/A 変換", "en": "FPGA up-conversion and D/A conversion"},
+    "TX:4": {"zh": "TX LPF 后送 RF UNIT", "ja": "TX LPF から RF UNIT へ", "en": "TX LPF feed to RF UNIT"},
+    "TX:5": {"zh": "RF UNIT 波段滤波、增益控制与 YGR AMP", "ja": "RF UNIT バンドフィルタ・利得制御・YGR AMP", "en": "RF UNIT band filters, gain control and YGR amp"},
+    "TX:6": {"zh": "PA UNIT 驱动放大与推挽功放", "ja": "PA UNIT ドライブ増幅とプッシュプル電力増幅", "en": "PA UNIT driver and push-pull power amplifier"},
+    "TX:7": {"zh": "PA UNIT LPF 与前向/反射波检测", "ja": "PA UNIT LPF と進行波／反射波検出", "en": "PA UNIT LPF and forward/reflected wave detection"},
+    "TX:8": {"zh": "TUNER UNIT 至天线", "ja": "TUNER UNIT からアンテナへ", "en": "TUNER UNIT to antenna"}
+  },
+  "faults": {
+    "no_display": {
+      "symptom": {"zh": "开机无显示 / 不通电", "ja": "電源を入れても表示されない／通電しない", "en": "No display / does not power on"},
+      "aliases": {"zh": ["开机无显示", "黑屏", "不通电", "无法开机"], "ja": ["電源が入らない", "画面が映らない", "表示されない", "通電しない", "黒画面"], "en": ["no display", "won't power on", "dead", "black screen"]},
+      "suspects": {"zh": ["整机供电输入", "电源稳压链", "DISPLAY UNIT", "MAIN UNIT 复位与 FPGA 配置"], "ja": ["本体電源入力", "電源レギュレータ系", "DISPLAY UNIT", "MAIN UNIT リセット／FPGA 構成"], "en": ["DC supply input", "Regulator chain", "DISPLAY UNIT", "MAIN UNIT reset / FPGA configuration"]},
+      "reasoning_basis": {"zh": "依据 §1 供电规格、§2 稳压器标注、§8 电源网络分布与 §3-3 FPGA 上电加载描述，按「外部供电→稳压→显示接口→数字核心」顺序排列；属派生推理。", "ja": "§1 の電源仕様、§2 のレギュレータ表記、§8 の電源ネット配置、§3-3 の FPGA 起動時ロードの記述に基づき、「外部電源→レギュレータ→表示インターフェース→デジタルコア」の順に配置した派生推論です。", "en": "Derived from SECTION 1 supply specs, SECTION 2 regulator labels, SECTION 8 power-net distribution and SECTION 3-3 FPGA boot loading; ordered external supply -> regulators -> display interface -> digital core."},
+      "steps": {
+        "zh": ["先核对外部直流供电与保险丝：规格书要求 13.8 V DC ±15%，测试连接要求 13.8 V/30 A。手册未给出机内测试点正常电压，不要用推断阈值判断。", "若外部供电正常，按 §2 内部视图逐级核对稳压器标注：14V/8V/5V/3R3V 等电源网络在 §8 接线图中分布于各板。", "核对 DISPLAY UNIT 与 MAIN UNIT 之间的连接与显示器件：§5 给出 DS1（LCD）与 J51 等接插件位号，§7 给出板图位置。", "若供电与连接正常，检查 MAIN UNIT 的 CPU/FPGA 上电配置链（FPGA 程序由外部 EEPROM 在开机时加载），对应 §3-3 与 §10 MAIN UNIT 图纸。"],
+        "ja": ["最初に外部 DC 電源とヒューズを確認します。仕様は 13.8 V DC ±15%、試験接続は 13.8 V/30 A です。機内テストポイントの正常電圧はマニュアルに記載がないため、推定したしきい値で判定しないでください。", "外部電源が正常なら、§2 の内部ビューに従ってレギュレータ表記を順に確認します。14V/8V/5V/3R3V 等の電源ネットは §8 の配線図に示されています。", "DISPLAY UNIT と MAIN UNIT 間の接続および表示デバイスを確認します。§5 に DS1（LCD）や J51 等の位番、§7 に基板図があります。", "電源・接続が正常なら、MAIN UNIT の CPU/FPGA 起動時構成を確認します（FPGA プログラムは電源投入時に外部 EEPROM からロード）。§3-3 と §10 MAIN UNIT を参照。"],
+        "en": ["Check the external DC supply and fuses first: the spec requires 13.8 V DC +/-15% and the test setup 13.8 V/30 A. The manual gives no internal test-point voltages, so do not apply assumed thresholds.", "If the supply is good, follow the regulator labels in SECTION 2. Power nets 14V/8V/5V/3R3V are distributed across boards in the SECTION 8 wiring diagram.", "Check the DISPLAY-to-MAIN connection and display devices: SECTION 5 lists DS1 (LCD) and connectors such as J51; SECTION 7 gives board layouts.", "If supply and connections are good, inspect the MAIN UNIT CPU/FPGA boot configuration (the FPGA loads its program from an external EEPROM at power-on); see SECTION 3-3 and the SECTION 10 MAIN UNIT sheets."]
+      }
+    },
+    "low_tx_power": {
+      "symptom": {"zh": "发射功率低", "ja": "送信出力が低い", "en": "Low transmit power"},
+      "aliases": {"zh": ["发射功率低", "功率上不去", "输出功率小"], "ja": ["送信出力が低い", "出力が出ない", "パワーが上がらない", "送信電力低下"], "en": ["low power", "low tx output", "low tx power", "reduced output power"]},
+      "suspects": {"zh": ["PA UNIT 功放", "PA UNIT 驱动级", "RF UNIT 增益控制/YGR AMP", "ALC 与功率检测", "TUNER UNIT 与天馈"], "ja": ["PA UNIT 電力増幅段", "PA UNIT ドライブ段", "RF UNIT 利得制御／YGR AMP", "ALC と電力検出", "TUNER UNIT とアンテナ系"], "en": ["PA UNIT power amplifier", "PA UNIT driver", "RF UNIT gain control / YGR amp", "ALC and power detection", "TUNER UNIT and antenna feed"]},
+      "reasoning_basis": {"zh": "依据 §3-1/§3-2 发射信号链（RF 增益→驱动→功放→LPF→检波→天调）与 §4 功率调整目标值，按由外到内、由后级到前级排列；属派生推理。", "ja": "§3-1/§3-2 の送信信号経路（RF 利得→ドライブ→電力増幅→LPF→検波→チューナー）と §4 の電力調整目標値に基づき、外部から内部、後段から前段の順に配置した派生推論です。", "en": "Derived from the SECTION 3-1/3-2 transmit chain (RF gain -> driver -> PA -> LPF -> detector -> tuner) and SECTION 4 power targets; ordered outside-in and from the output stage backwards."},
+      "steps": {
+        "zh": ["先排除天馈与假负载：§4 要求 50 Ω 假负载/功率计，HF 100% 档调整目标为 105 W（§4-4 原文）。", "沿 TX 信号链向后核对 PA UNIT：驱动级 Q121、推挽功放 Q131/Q132，§3-1 说明功放输出可达 100 W（HF/50 MHz）。", "核对前向/反射波检测与 ALC 环路：D961/D962 检波、IC981 缓冲后送 MAIN UNIT CPU 监控；误动作会压低驱动。", "核对 RF UNIT 侧增益控制（D1051/D1052）与 YGR AMP（IC1031），以及 §4-3/§4-4 的 TX IDLING / TX POWER 调整项，最后查 §10 PA UNIT 图纸。"],
+        "ja": ["最初にアンテナ系とダミーロードを切り分けます。§4 は 50 Ω ダミーロード／電力計を要求し、HF 100% の調整目標は 105 W です（§4-4）。", "TX 信号経路を後段から確認します。PA UNIT のドライブ段 Q121、プッシュプル電力増幅 Q131/Q132。§3-1 では HF/50 MHz で 100 W まで増幅と記載されています。", "進行波／反射波検出と ALC ループを確認します。D961/D962 で検波し、IC981 のバッファ経由で MAIN UNIT の CPU が監視します。誤動作はドライブレベルを下げます。", "RF UNIT の利得制御（D1051/D1052）と YGR AMP（IC1031）、§4-3/§4-4 の TX IDLING／TX POWER 調整項目を確認し、最後に §10 の PA UNIT 回路図を参照します。"],
+        "en": ["Rule out the antenna feed and dummy load first: SECTION 4 requires a 50 ohm dummy load / power meter; the HF 100% target is 105 W (SECTION 4-4).", "Work backwards along the TX chain in the PA UNIT: driver Q121 and push-pull PA Q131/Q132. SECTION 3-1 states up to 100 W on HF/50 MHz.", "Check forward/reflected wave detection and the ALC loop: D961/D962 detect, IC981 buffers, and the MAIN UNIT CPU monitors. A false action reduces drive.", "Check RF UNIT gain control (D1051/D1052), the YGR amp (IC1031) and the SECTION 4-3/4-4 TX IDLING / TX POWER adjustments; finish with the SECTION 10 PA UNIT sheets."]
+      }
+    },
+    "no_tx_output": {
+      "symptom": {"zh": "发射完全无输出", "ja": "送信出力が全く出ない", "en": "No transmit output at all"},
+      "aliases": {"zh": ["发射无输出", "不能发射", "无功率"], "ja": ["送信できない", "送信出力なし", "電波が出ない"], "en": ["no transmit", "no tx", "zero output"]},
+      "suspects": {"zh": ["MIC/调制输入", "FPGA/D-A 上变频", "RF UNIT 发射链", "PA UNIT 功放与继电器", "PTT/静音控制"], "ja": ["MIC／変調入力", "FPGA／D-A アップコンバート", "RF UNIT 送信系", "PA UNIT 電力増幅とリレー", "PTT／ミュート制御"], "en": ["MIC / modulation input", "FPGA / D-A up-conversion", "RF UNIT transmit chain", "PA UNIT amplifier and relays", "PTT / mute control"]},
+      "reasoning_basis": {"zh": "依据 §3-3 发射信号处理与 §3-1/§3-2 发射 RF 链，沿信号流向从 MIC 到天线逐段定位；属派生推理。", "ja": "§3-3 の送信信号処理と §3-1/§3-2 の送信 RF 経路に基づき、MIC からアンテナへ信号の流れに沿って切り分ける派生推論です。", "en": "Derived from SECTION 3-3 transmit processing and the SECTION 3-1/3-2 transmit RF chain, tracing the signal from MIC to antenna."},
+      "steps": {
+        "zh": ["先核对调制输入：§3-3 说明麦克风信号经 MIC AMP（IC1002）与 A/D（IC1001）进入 DSP，ACC 输入经 IC1003 静音开关。", "核对数字调制与上变频链：DSP（IC901）产生 36 kHz TX IF，FPGA（IC1351）上变频，D/A（IC1331）转模拟，经 LPF（L1281/L1282 等）送 RF UNIT。", "核对 RF UNIT 发射通道的滤波器选择、增益控制与 YGR AMP，以及 TX/RX 切换相关二极管。", "核对 PA UNIT 驱动/功放与 LPF 继电器选通，再按 §4-3/§4-4 检查 TX IDLING 与 TX POWER 调整菜单是否失准。"],
+        "ja": ["最初に変調入力を確認します。§3-3 ではマイク信号は MIC AMP（IC1002）と A/D（IC1001）を経て DSP へ、ACC 入力は IC1003 のミュート SW を経由します。", "デジタル変調とアップコンバートを確認します。DSP（IC901）が 36 kHz TX IF を生成し、FPGA（IC1351）がアップコンバート、D/A（IC1331）でアナログ化、LPF（L1281/L1282 等）から RF UNIT へ。", "RF UNIT の送信側フィルタ選択・利得制御・YGR AMP、および TX/RX 切替ダイオードを確認します。", "PA UNIT のドライブ／電力増幅と LPF リレー選択を確認し、§4-3/§4-4 の TX IDLING／TX POWER 調整メニューのずれも確認します。"],
+        "en": ["Check the modulation input: SECTION 3-3 routes the mic through MIC AMP (IC1002) and A/D (IC1001) into the DSP; ACC input passes the IC1003 mute switch.", "Check digital modulation and up-conversion: DSP (IC901) generates the 36 kHz TX IF, FPGA (IC1351) up-converts, D/A (IC1331) produces the analog signal, and the LPF (L1281/L1282 etc.) feeds RF UNIT.", "Check RF UNIT transmit filter selection, gain control, the YGR amp and the TX/RX switching diodes.", "Check the PA UNIT driver/amplifier and LPF relay selection, then verify the SECTION 4-3/4-4 TX IDLING and TX POWER adjustment menus."]
+      }
+    },
+    "rx_noise": {
+      "symptom": {"zh": "接收有噪声 / 灵敏度低", "ja": "受信に雑音が多い／感度が低い", "en": "Noisy reception / low sensitivity"},
+      "aliases": {"zh": ["接收有噪声", "噪声大", "灵敏度低", "收不到弱信号"], "ja": ["受信ノイズ", "雑音が多い", "感度が低い", "弱い信号が取れない"], "en": ["noisy receiver", "low sensitivity", "receiver noise", "weak signal"]},
+      "suspects": {"zh": ["RF UNIT 前置放大与波段滤波", "MAIN UNIT 外部 AGC 与 A/D 输入", "电源纹波/接地", "天馈与天调"], "ja": ["RF UNIT 前置増幅とバンドフィルタ", "MAIN UNIT 外部 AGC と A/D 入力", "電源リプル／接地", "アンテナ系とチューナー"], "en": ["RF UNIT preamp and band filters", "MAIN UNIT external AGC and A/D input", "Supply ripple / grounding", "Antenna feed and tuner"]},
+      "reasoning_basis": {"zh": "依据 §3-2 接收信号链（衰减→滤波→前放→外部 AGC→A/D）与 Direct Sampling 系统对 A/D 输入动态范围的要求；先外部后前端、先模拟后数字；属派生推理。", "ja": "§3-2 の受信信号経路（減衰→フィルタ→前置増幅→外部 AGC→A/D）と、Direct Sampling 方式における A/D 入力ダイナミックレンジの要件に基づきます。外部→前端、アナログ→デジタルの順の派生推論です。", "en": "Derived from the SECTION 3-2 receive chain (attenuator -> filters -> preamp -> external AGC -> A/D) and the direct-sampling A/D dynamic-range requirement; external before front-end, analog before digital."},
+      "steps": {
+        "zh": ["先隔离外部干扰与天馈：确认假负载/信号源条件符合 §4 测试连接（SSG 输出范围、50 Ω 终端）。", "核对 RX 前端的衰减器与前放：§3-2 说明衰减器 D1081~D1083 在 0–20 dB 间切换，前放 Q1211 之后进入 15 个波段滤波器。", "核对 MAIN UNIT 外部 AGC 与 A/D 输入：D1231 切换、D1251 PIN 衰减、IC971 提供 AGC 电压，电平须落在 A/D 动态范围内。", "核对各板电源网络（3R3V/8V/5V 等）与稳压器标注，最后查 §10 RF/MAIN UNIT 图纸与 §7 板图定位。"],
+        "ja": ["最初に外部妨害とアンテナ系を切り分けます。§4 の試験接続（SSG 出力範囲、50 Ω 終端）に合っているか確認します。", "RX 前端の減衰器と前置増幅を確認します。§3-2 では D1081〜D1083 が 0〜20 dB で切替わり、Q1211 の後に 15 個のバンドフィルタが続きます。", "MAIN UNIT の外部 AGC と A/D 入力を確認します。D1231 切替、D1251 PIN 減衰、IC971 の AGC 電圧により、レベルは A/D のダイナミックレンジ内に収める必要があります。", "各基板の電源ネット（3R3V/8V/5V 等）とレギュレータ表記を確認し、最後に §10 の RF/MAIN UNIT 回路図と §7 の基板図で位置を特定します。"],
+        "en": ["Isolate external interference and the antenna feed first: verify the SECTION 4 test setup (SSG output range, 50 ohm termination).", "Check the RX front-end attenuator and preamp: SECTION 3-2 switches D1081-D1083 between 0-20 dB; preamp Q1211 feeds 15 band filters.", "Check MAIN UNIT external AGC and A/D input: D1231 switching, D1251 PIN attenuator, IC971 AGC voltage; the level must stay inside the A/D dynamic range.", "Check board power nets (3R3V/8V/5V etc.) and regulator labels, then locate parts in the SECTION 10 RF/MAIN sheets and SECTION 7 board layouts."]
+      }
+    },
+    "no_rx": {
+      "symptom": {"zh": "完全无接收", "ja": "全く受信できない", "en": "No reception at all"},
+      "aliases": {"zh": ["无接收", "收不到信号", "静噪"], "ja": ["受信できない", "受信なし", "信号が入らない"], "en": ["no receive", "no rx", "dead receiver"]},
+      "suspects": {"zh": ["RX 静音开关", "RF UNIT 滤波器选通", "A/D 与 FPGA", "DSP 解调", "AF 输出级"], "ja": ["RX ミュート SW", "RF UNIT フィルタ選択", "A/D と FPGA", "DSP 復調", "AF 出力段"], "en": ["RX mute switch", "RF UNIT filter selection", "A/D and FPGA", "DSP demodulation", "AF output stage"]},
+      "reasoning_basis": {"zh": "依据 §3-2/§3-3 接收信号链按信号流向逐段二分；无接收与灵敏度低的区别在于优先检查静音/选通/数字核心而非前端增益；属派生推理。", "ja": "§3-2/§3-3 の受信信号経路に沿って二分探索する派生推論です。感度低下ではなく無受信の場合は、前端利得よりもミュート／選択／デジタルコアを優先します。", "en": "Derived binary search along the SECTION 3-2/3-3 receive chain. Unlike low sensitivity, a dead receiver calls for mute/selection/digital-core checks before front-end gain."},
+      "steps": {
+        "zh": ["沿 RX 链从天线端确认：§3-2 指出接收信号经 RX mute switch（D1001）与波段滤波器才到前放。", "核对 MAIN UNIT 的 A/D→FPGA（IC1351）→36 kHz IF 路径；§3-3 说明 FPGA 程序由外部 EEPROM 上电加载。", "核对 DSP（IC901）解调与 D/A（IC991）之后的 AF 放大链（IC992、IC721）。", "核对扬声器 LPF 与 speaker SW（Q746）；外接 [EXT-SP] 插入时会断开机内扬声器。"],
+        "ja": ["RX 経路をアンテナ側から確認します。§3-2 では受信信号は RX mute switch（D1001）とバンドフィルタを経て前置増幅に達します。", "MAIN UNIT の A/D→FPGA（IC1351）→36 kHz IF を確認します。§3-3 では FPGA プログラムは電源投入時に外部 EEPROM からロードされます。", "DSP（IC901）の復調と、D/A（IC991）以降の AF 増幅段（IC992、IC721）を確認します。", "スピーカー LPF と speaker SW（Q746）を確認します。[EXT-SP] 接続時は内蔵スピーカーが切断されます。"],
+        "en": ["Trace the RX chain from the antenna: SECTION 3-2 routes the signal through the RX mute switch (D1001) and band filters before the preamp.", "Check MAIN UNIT A/D -> FPGA (IC1351) -> 36 kHz IF; SECTION 3-3 states the FPGA loads from an external EEPROM at power-on.", "Check DSP (IC901) demodulation and the AF chain after D/A (IC991): IC992 and IC721.", "Check the speaker LPF and speaker switch (Q746); connecting [EXT-SP] disconnects the internal speaker."]
+      }
+    },
+    "no_audio": {
+      "symptom": {"zh": "音频无声 / 扬声器不响", "ja": "音が出ない／スピーカーが鳴らない", "en": "No audio / speaker silent"},
+      "aliases": {"zh": ["无声音", "音频无声", "扬声器不响"], "ja": ["音が出ない", "無音", "スピーカーが鳴らない"], "en": ["no audio", "no sound", "silent speaker"]},
+      "suspects": {"zh": ["D 类 AF 功放", "扬声器 LPF 与切换", "EXT-SP 插孔", "D/A 输出"], "ja": ["D 級 AF 電力増幅", "スピーカー LPF と切替", "EXT-SP ジャック", "D/A 出力"], "en": ["Class-D AF amplifier", "Speaker LPF and switching", "EXT-SP jack", "D/A output"]},
+      "reasoning_basis": {"zh": "依据 §3-3 AF 电路描述，按「输出接口→功放→前级→D/A」逆序定位；属派生推理。", "ja": "§3-3 の AF 回路記述に基づき、「出力インターフェース→電力増幅→前段→D/A」の逆順で切り分ける派生推論です。", "en": "Derived from the SECTION 3-3 AF circuit description, working backwards: output jack -> amplifier -> preamp -> D/A."},
+      "steps": {
+        "zh": ["先排除外接扬声器插孔与静音设置：§3-3 明确 [EXT-SP] 接入时机内扬声器被断开。", "核对 D/A（IC991）→ AF AMP（IC992）→ D 类功放（IC721）链，§3-3 标注输出可达 2.5 W（8 Ω、1 kHz、10% 失真）。", "核对扬声器 LPF（L731/L732/C731~C735）与 speaker SW（Q746）位号在 §5/§7/§10 中的位置。"],
+        "ja": ["最初に外部スピーカージャックとミュート設定を切り分けます。§3-3 では [EXT-SP] 接続時に内蔵スピーカーが切断されます。", "D/A（IC991）→ AF AMP（IC992）→ D 級電力増幅（IC721）を確認します。§3-3 では 2.5 W（8 Ω、1 kHz、歪率 10%）までと記載されています。", "スピーカー LPF（L731/L732/C731〜C735）と speaker SW（Q746）の位番を §5/§7/§10 で位置確認します。"],
+        "en": ["Rule out the external speaker jack and mute settings first: SECTION 3-3 states [EXT-SP] disconnects the internal speaker.", "Check D/A (IC991) -> AF AMP (IC992) -> class-D amplifier (IC721); SECTION 3-3 quotes up to 2.5 W (8 ohm, 1 kHz, 10% distortion).", "Locate the speaker LPF (L731/L732/C731-C735) and speaker switch (Q746) in SECTIONS 5/7/10."]
+      }
+    },
+    "tuner_no_match": {
+      "symptom": {"zh": "天调不动作 / SWR 异常", "ja": "チューナーが動作しない／SWR 異常", "en": "Tuner not matching / abnormal SWR"},
+      "aliases": {"zh": ["天调不动作", "驻波高", "SWR 高", "调谐失败"], "ja": ["チューナーが動かない", "SWR が高い", "チューニング失敗", "整合が取れない"], "en": ["tuner", "high swr", "no match", "tuner failure"]},
+      "suspects": {"zh": ["TUNER UNIT", "SWR/PWR 检测", "PA UNIT LPF 继电器", "天馈与接地"], "ja": ["TUNER UNIT", "SWR／PWR 検出", "PA UNIT LPF リレー", "アンテナ系と接地"], "en": ["TUNER UNIT", "SWR / PWR detection", "PA UNIT LPF relays", "Antenna feed and grounding"]},
+      "reasoning_basis": {"zh": "依据 §3-1 发射末级与 SWR/天调控制关系，先外部负载再检测电路再执行机构；属派生推理。", "ja": "§3-1 の送信終段と SWR／チューナー制御の関係に基づき、外部負荷→検出回路→アクチュエータの順に配置した派生推論です。", "en": "Derived from the SECTION 3-1 output-stage / SWR / tuner control relationship: external load first, then detection, then actuator."},
+      "steps": {
+        "zh": ["先排除天馈与负载：§4 调整程序要求 50 Ω/100 Ω 假负载与功率计，SWR 读数异常首先可能是外部负载。", "核对 SWR 检测电路：§3-1 说明 CM 耦合器与检波二极管 D961/D962 产生前向/反射波检测电压，经 IC981 缓冲送 MAIN UNIT CPU。", "核对 TUNER UNIT（IC1701）与 PA UNIT 的 LPF/继电器选通；§3-1 说明 LPF 由两侧继电器按发射频率选通。", "核对 §4-6 TUNER REFERENCE VOLTAGE ADJUSTMENT 项目；注意该调整项在手册中未给出电压目标值。"],
+        "ja": ["最初にアンテナ系と負荷を切り分けます。§4 は 50 Ω／100 Ω ダミーロードと電力計を要求しており、SWR 異常は外部負荷が原因の場合があります。", "SWR 検出回路を確認します。§3-1 では CM カプラと検波ダイオード D961/D962 が進行波／反射波検出電圧を生成し、IC981 のバッファ経由で MAIN UNIT の CPU へ送られます。", "TUNER UNIT（IC1701）と PA UNIT の LPF／リレー選択を確認します。§3-1 では LPF は送信周波数に応じて両側のリレーで選択されます。", "§4-6 の TUNER REFERENCE VOLTAGE ADJUSTMENT を確認します。ただしマニュアルには電圧目標値が記載されていません。"],
+        "en": ["Rule out the antenna feed and load: SECTION 4 requires 50/100 ohm dummy loads and a power meter; an abnormal SWR reading may simply be the external load.", "Check SWR detection: SECTION 3-1 describes the CM coupler and detector diodes D961/D962 producing forward/reflected sense voltages, buffered by IC981 for the MAIN UNIT CPU.", "Check TUNER UNIT (IC1701) and PA UNIT LPF/relay selection; SECTION 3-1 says LPFs are selected by relays on both sides according to transmit frequency.", "Check the SECTION 4-6 TUNER REFERENCE VOLTAGE ADJUSTMENT item; note that the manual gives no voltage target for it."]
+      }
+    },
+    "frequency_unstable": {
+      "symptom": {"zh": "频率不准 / 失谐", "ja": "周波数がずれる／不安定", "en": "Frequency offset / instability"},
+      "aliases": {"zh": ["频率不准", "频偏", "失谐"], "ja": ["周波数ずれ", "周波数が不安定", "オフセット"], "en": ["frequency offset", "drift", "frequency unstable"]},
+      "suspects": {"zh": ["基准时钟/TCXO", "FPGA 数字本振", "§4-6 参考频率调整"], "ja": ["基準クロック／TCXO", "FPGA デジタル発振", "§4-6 基準周波数調整"], "en": ["Reference clock / TCXO", "FPGA digital LO", "SECTION 4-6 reference adjustment"]},
+      "reasoning_basis": {"zh": "依据 §1 频率稳定度规格、§4-6 频率调整项与 §3-3 FPGA 数字本振（DDS）描述；属派生推理。", "ja": "§1 の周波数安定度仕様、§4-6 の周波数調整項目、§3-3 の FPGA デジタル発振（DDS）記述に基づく派生推論です。", "en": "Derived from the SECTION 1 frequency-stability spec, SECTION 4-6 adjustments and the SECTION 3-3 FPGA digital LO (DDS) description."},
+      "steps": {
+        "zh": ["核对规格：§1 标称频率稳定度优于 ±0.5 ppm（–10°C~+60°C），测试设备要求频率精度 ±1 ppm 或更好。", "核对 §4-6 FREQUENCY ADJUSTMENTS 中的 REF ADJ 与 TUNER REFERENCE VOLTAGE ADJUSTMENT 调整项。", "核对 MAIN UNIT 时钟/FPGA 相关位号在 §5 与 §10 图纸中的位置；手册未给出时钟测试点波形或电平。"],
+        "ja": ["仕様を確認します。§1 の周波数安定度は ±0.5 ppm 以下（–10°C〜+60°C）、測定器には ±1 ppm 以上の精度が要求されます。", "§4-6 FREQUENCY ADJUSTMENTS の REF ADJ と TUNER REFERENCE VOLTAGE ADJUSTMENT を確認します。", "MAIN UNIT のクロック／FPGA 関連位番を §5 と §10 で位置確認します。クロックのテストポイント波形・レベルはマニュアルに記載がありません。"],
+        "en": ["Check the spec: SECTION 1 states frequency stability better than +/-0.5 ppm (-10 C to +60 C); test equipment must be +/-1 ppm or better.", "Check the REF ADJ and TUNER REFERENCE VOLTAGE ADJUSTMENT items in SECTION 4-6 FREQUENCY ADJUSTMENTS.", "Locate MAIN UNIT clock/FPGA designators in SECTIONS 5 and 10; the manual gives no clock test-point waveform or level."]
+      }
+    },
+    "usb_not_recognized": {
+      "symptom": {"zh": "USB 不识别 / CI-V 异常", "ja": "USB が認識されない／CI-V 異常", "en": "USB not recognized / CI-V fault"},
+      "aliases": {"zh": ["USB 不识别", "连不上电脑"], "ja": ["USB が認識されない", "PC と接続できない", "CI-V が動かない"], "en": ["usb", "ci-v", "usb not recognized", "no pc connection"]},
+      "suspects": {"zh": ["USB 接口与电源网络", "MAIN UNIT USB 编解码", "连接线缆"], "ja": ["USB インターフェースと電源ネット", "MAIN UNIT USB コーデック", "接続ケーブル"], "en": ["USB interface and power nets", "MAIN UNIT USB codec", "Cable"]},
+      "reasoning_basis": {"zh": "依据 §8/§9 接线与框图中的 USB 电源网络标注，按「线缆→供电→接口芯片」定位；属派生推理。", "ja": "§8/§9 の配線図・ブロック図にある USB 電源ネットの表記に基づき、「ケーブル→電源→インターフェース IC」の順で切り分ける派生推論です。", "en": "Derived from the USB power-net labels in the SECTION 8/9 wiring and block diagrams: cable -> supply -> interface IC."},
+      "steps": {
+        "zh": ["先排除线缆与主机侧；§5 给出相关接插件位号，§8 给出整机接线与 USB 电源网络标签。", "核对 USB3R3V 等电源网络在 §9 框图与 §10 MAIN UNIT 图纸中的分布。", "核对 MAIN UNIT 侧 USB/音频编解码相关位号在 §5 料表中的位置。"],
+        "ja": ["最初にケーブルと PC 側を切り分けます。§5 に関連コネクタ位番、§8 に全体配線と USB 電源ネットがあります。", "USB3R3V 等の電源ネットが §9 のブロック図と §10 の MAIN UNIT 回路図でどこに現れるか確認します。", "MAIN UNIT 側の USB／オーディオコーデック関連位番を §5 の部品表で確認します。"],
+        "en": ["Rule out the cable and host first; SECTION 5 lists the connectors and SECTION 8 shows wiring and USB power-net labels.", "Check where USB3R3V and related nets appear in the SECTION 9 block diagram and SECTION 10 MAIN UNIT sheets.", "Locate MAIN UNIT USB/audio codec designators in the SECTION 5 parts list."]
+      }
+    }
+  }
+}

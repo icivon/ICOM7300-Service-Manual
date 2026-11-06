@@ -1,0 +1,21 @@
+{
+  "device_model": "Icom IC-7300",
+  "manual_id": "S-15218XZ-C1",
+  "manual_title": "IC-7300 SERVICE MANUAL",
+  "schema_version": "1.0.0",
+  "source_sha256": "223b21ee6566a143252eb8e5f92e15c277c7842732fde403f31cba389c74c171",
+  "source_pages": 75,
+  "built_at": "2026-11-06T08:38:32+00:00",
+  "tables": {
+    "sections": 12,
+    "components": 2797,
+    "net_labels": 29,
+    "measurements": 49,
+    "signal_chain": 16,
+    "faults": 9,
+    "manual_gaps": 8,
+    "fts": 2908
+  },
+  "coverage_note": "manual=verbatim text layer; derived=engineering inference; not_in_manual=explicitly absent. See manual_gaps table.",
+  "distribution_note": "The original PDF is NOT included. Permission bits deny modify/assemble. End users must supply their own licensed copy for page lookup."
+}

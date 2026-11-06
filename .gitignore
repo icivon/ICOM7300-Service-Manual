@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# Copyright boundary - DO NOT commit the official manual or its page dumps.
+# The Icom PDF permits copy/extract but denies modify/assemble, and the
+# schematics are Icom Inc. copyrighted. See NOTICE.
+# ---------------------------------------------------------------------------
+*.pdf
+data/extracted/
+data/manifest/pdf_probe.json
+data/manifest/page_index.json
+
+# Build artefacts - regenerate with: python tools/run_all.py
+dist/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+
+# CodeBuddy IDE local state: share only the project-level Skill definition.
+.codebuddy/*
+!.codebuddy/skills/
+.codebuddy/skills/*
+!.codebuddy/skills/icom-7300/
+
+# Local scratch files
+*.log
+*.tmp

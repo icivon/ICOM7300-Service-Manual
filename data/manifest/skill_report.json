@@ -1,0 +1,39 @@
+{
+  "skill_md_bytes": 4805,
+  "references": [
+    "component-lookup.md",
+    "i18n.md",
+    "manual-gaps.md",
+    "measurements.md",
+    "overview.md",
+    "power-and-display.md",
+    "rx-and-audio.md",
+    "signal-chain.md",
+    "tuner-and-frequency.md",
+    "tx-power.md",
+    "usb-and-control.md"
+  ],
+  "generated_from": [
+    "fault_tree.jsonl",
+    "signal_chain.jsonl",
+    "measurements.jsonl",
+    "net_labels.jsonl",
+    "manual_gaps.jsonl"
+  ],
+  "codebuddy_project_path": ".codebuddy/skills/icom-7300/",
+  "codebuddy_files": [
+    "SKILL.md",
+    "references/component-lookup.md",
+    "references/i18n.md",
+    "references/manual-gaps.md",
+    "references/measurements.md",
+    "references/overview.md",
+    "references/power-and-display.md",
+    "references/rx-and-audio.md",
+    "references/signal-chain.md",
+    "references/tuner-and-frequency.md",
+    "references/tx-power.md",
+    "references/usb-and-control.md"
+  ],
+  "standard": "CodeBuddy Skills / Agent Skills (SKILL.md + references/)"
+}

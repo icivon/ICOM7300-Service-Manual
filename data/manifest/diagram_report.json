@@ -1,0 +1,482 @@
+{
+  "pages_processed": [
+    47,
+    73
+  ],
+  "word_resolution": {
+    "exact": 2243,
+    "split": 21,
+    "ambiguous": 31
+  },
+  "unresolved_count": 31,
+  "unresolved_sample": [
+    {
+      "page": 53,
+      "token": "9621C8621C",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 53,
+      "token": "7621C6621C",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 53,
+      "token": "6831R1731R",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 59,
+      "token": "2SC3356",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 59,
+      "token": "C143EE",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 59,
+      "token": "Q1512LDTC143",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 60,
+      "token": "23LC1024T",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 60,
+      "token": "2SC3356",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 62,
+      "token": "R3100",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 63,
+      "token": "C106B5001ZMM",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 63,
+      "token": "1BRC4092MJN",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 63,
+      "token": "C106B5001ZMM",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 64,
+      "token": "C3410.1",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 64,
+      "token": "C3450.1",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 64,
+      "token": "C106B5001ZMM",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 64,
+      "token": "C106B5001ZMM",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 65,
+      "token": "C106B5001ZMM",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 65,
+      "token": "C106B5001ZMM",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 65,
+      "token": "C106B5001ZMM",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 67,
+      "token": "R13193.3",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 68,
+      "token": "23LC1024T",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 69,
+      "token": "2SC3356L",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 69,
+      "token": "S157BRL",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 69,
+      "token": "C1511",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 69,
+      "token": "C1513",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 70,
+      "token": "2SC4116",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 70,
+      "token": "2SC4116",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 70,
+      "token": "S157BRL",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 70,
+      "token": "S157BRL",
+      "reason": "multiple possible segmentations"
+    },
+    {
+      "page": 73,
+      "token": "S157BRL",
+      "reason": "multiple possible segmentations"
+    }
+  ],
+  "ambiguous_page_hits": 576,
+  "ambiguous_page_hits_sample": [
+    {
+      "ref": "Q1201",
+      "page": 51,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "Q1231",
+      "page": 51,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "D401",
+      "page": 62,
+      "kind": "schematic",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "D401",
+      "page": 48,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "L1231",
+      "page": 51,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "L1233",
+      "page": 51,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "L1261",
+      "page": 51,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R4",
+      "page": 62,
+      "kind": "schematic",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R4",
+      "page": 47,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R12",
+      "page": 48,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R13",
+      "page": 48,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R24",
+      "page": 62,
+      "kind": "schematic",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R24",
+      "page": 48,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R31",
+      "page": 48,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R41",
+      "page": 62,
+      "kind": "schematic",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R41",
+      "page": 48,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R53",
+      "page": 62,
+      "kind": "schematic",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R53",
+      "page": 48,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R54",
+      "page": 62,
+      "kind": "schematic",
+      "reason": "designator reused across boards"
+    },
+    {
+      "ref": "R54",
+      "page": 48,
+      "kind": "board_layout",
+      "reason": "designator reused across boards"
+    }
+  ],
+  "refs_with_schematic_pages": 1443,
+  "refs_with_board_layout_pages": 542,
+  "net_label_candidates": 31,
+  "check_points": 27,
+  "page_stats": [
+    {
+      "page": 47,
+      "words": 289,
+      "exact": 56,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 48,
+      "words": 378,
+      "exact": 172,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 49,
+      "words": 449,
+      "exact": 221,
+      "split": 1,
+      "ambiguous": 0
+    },
+    {
+      "page": 50,
+      "words": 63,
+      "exact": 0,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 51,
+      "words": 683,
+      "exact": 301,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 52,
+      "words": 48,
+      "exact": 0,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 53,
+      "words": 1384,
+      "exact": 0,
+      "split": 0,
+      "ambiguous": 3
+    },
+    {
+      "page": 54,
+      "words": 48,
+      "exact": 0,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 55,
+      "words": 515,
+      "exact": 0,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 56,
+      "words": 64,
+      "exact": 0,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 57,
+      "words": 804,
+      "exact": 8,
+      "split": 1,
+      "ambiguous": 0
+    },
+    {
+      "page": 58,
+      "words": 426,
+      "exact": 16,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 59,
+      "words": 1265,
+      "exact": 23,
+      "split": 2,
+      "ambiguous": 3
+    },
+    {
+      "page": 60,
+      "words": 905,
+      "exact": 79,
+      "split": 3,
+      "ambiguous": 2
+    },
+    {
+      "page": 61,
+      "words": 274,
+      "exact": 14,
+      "split": 1,
+      "ambiguous": 0
+    },
+    {
+      "page": 62,
+      "words": 1887,
+      "exact": 148,
+      "split": 0,
+      "ambiguous": 1
+    },
+    {
+      "page": 63,
+      "words": 1846,
+      "exact": 150,
+      "split": 1,
+      "ambiguous": 3
+    },
+    {
+      "page": 64,
+      "words": 2132,
+      "exact": 64,
+      "split": 0,
+      "ambiguous": 4
+    },
+    {
+      "page": 65,
+      "words": 1115,
+      "exact": 127,
+      "split": 2,
+      "ambiguous": 3
+    },
+    {
+      "page": 66,
+      "words": 1207,
+      "exact": 125,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 67,
+      "words": 610,
+      "exact": 57,
+      "split": 0,
+      "ambiguous": 1
+    },
+    {
+      "page": 68,
+      "words": 6108,
+      "exact": 36,
+      "split": 1,
+      "ambiguous": 1
+    },
+    {
+      "page": 69,
+      "words": 1681,
+      "exact": 292,
+      "split": 7,
+      "ambiguous": 4
+    },
+    {
+      "page": 70,
+      "words": 425,
+      "exact": 58,
+      "split": 1,
+      "ambiguous": 4
+    },
+    {
+      "page": 71,
+      "words": 923,
+      "exact": 112,
+      "split": 0,
+      "ambiguous": 0
+    },
+    {
+      "page": 72,
+      "words": 534,
+      "exact": 72,
+      "split": 1,
+      "ambiguous": 0
+    },
+    {
+      "page": 73,
+      "words": 610,
+      "exact": 112,
+      "split": 0,
+      "ambiguous": 2
+    }
+  ]
+}

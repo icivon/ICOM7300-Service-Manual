@@ -1,0 +1,1516 @@
+{
+  "source": "SECTION 5 PARTS LIST (p22-40)",
+  "total_ref_keys": 2797,
+  "unique_refs": 2388,
+  "ambiguous_refs": {
+    "C1": [
+      "MAIN UNIT::C1",
+      "MIC UNIT::C1",
+      "SD UNIT::C1"
+    ],
+    "C1001": [
+      "MAIN UNIT::C1001",
+      "RF UNIT::C1001"
+    ],
+    "C1002": [
+      "MAIN UNIT::C1002",
+      "RF UNIT::C1002",
+      "TUNER UNIT::C1002"
+    ],
+    "C1003": [
+      "MAIN UNIT::C1003",
+      "RF UNIT::C1003"
+    ],
+    "C1011": [
+      "MAIN UNIT::C1011",
+      "TUNER UNIT::C1011"
+    ],
+    "C1012": [
+      "MAIN UNIT::C1012",
+      "TUNER UNIT::C1012"
+    ],
+    "C1013": [
+      "MAIN UNIT::C1013",
+      "TUNER UNIT::C1013"
+    ],
+    "C1014": [
+      "MAIN UNIT::C1014",
+      "TUNER UNIT::C1014"
+    ],
+    "C102": [
+      "RF UNIT::C102",
+      "PA UNIT::C102",
+      "DISPLAY UNIT::C102"
+    ],
+    "C1020": [
+      "MAIN UNIT::C1020",
+      "RF UNIT::C1020"
+    ],
+    "C1021": [
+      "MAIN UNIT::C1021",
+      "RF UNIT::C1021",
+      "TUNER UNIT::C1021"
+    ],
+    "C1022": [
+      "MAIN UNIT::C1022",
+      "RF UNIT::C1022",
+      "TUNER UNIT::C1022"
+    ],
+    "C1023": [
+      "MAIN UNIT::C1023",
+      "RF UNIT::C1023",
+      "TUNER UNIT::C1023"
+    ],
+    "C1024": [
+      "MAIN UNIT::C1024",
+      "RF UNIT::C1024",
+      "TUNER UNIT::C1024"
+    ],
+    "C103": [
+      "RF UNIT::C103",
+      "PA UNIT::C103",
+      "DISPLAY UNIT::C103"
+    ],
+    "C104": [
+      "PA UNIT::C104",
+      "DISPLAY UNIT::C104"
+    ],
+    "C106": [
+      "MAIN UNIT::C106",
+      "PA UNIT::C106"
+    ],
+    "C1101": [
+      "RF UNIT::C1101",
+      "TUNER UNIT::C1101"
+    ],
+    "C1102": [
+      "RF UNIT::C1102",
+      "TUNER UNIT::C1102"
+    ],
+    "C111": [
+      "MAIN UNIT::C111",
+      "PA UNIT::C111"
+    ],
+    "C1201": [
+      "MAIN UNIT::C1201",
+      "RF UNIT::C1201"
+    ],
+    "C1202": [
+      "MAIN UNIT::C1202",
+      "RF UNIT::C1202",
+      "TUNER UNIT::C1202"
+    ],
+    "C1203": [
+      "MAIN UNIT::C1203",
+      "RF UNIT::C1203",
+      "TUNER UNIT::C1203"
+    ],
+    "C1205": [
+      "MAIN UNIT::C1205",
+      "RF UNIT::C1205"
+    ],
+    "C1207": [
+      "MAIN UNIT::C1207",
+      "RF UNIT::C1207"
+    ],
+    "C1209": [
+      "MAIN UNIT::C1209",
+      "RF UNIT::C1209"
+    ],
+    "C121": [
+      "MAIN UNIT::C121",
+      "PA UNIT::C121"
+    ],
+    "C1211": [
+      "MAIN UNIT::C1211",
+      "RF UNIT::C1211"
+    ],
+    "C1212": [
+      "MAIN UNIT::C1212",
+      "RF UNIT::C1212"
+    ],
+    "C1213": [
+      "MAIN UNIT::C1213",
+      "RF UNIT::C1213"
+    ],
+    "C122": [
+      "MAIN UNIT::C122",
+      "PA UNIT::C122"
+    ],
+    "C1220": [
+      "MAIN UNIT::C1220",
+      "RF UNIT::C1220"
+    ],
+    "C1221": [
+      "MAIN UNIT::C1221",
+      "RF UNIT::C1221"
+    ],
+    "C1222": [
+      "MAIN UNIT::C1222",
+      "RF UNIT::C1222"
+    ],
+    "C1223": [
+      "MAIN UNIT::C1223",
+      "RF UNIT::C1223"
+    ],
+    "C1224": [
+      "MAIN UNIT::C1224",
+      "RF UNIT::C1224"
+    ],
+    "C1231": [
+      "MAIN UNIT::C1231",
+      "RF UNIT::C1231"
+    ],
+    "C1232": [
+      "MAIN UNIT::C1232",
+      "RF UNIT::C1232"
+    ],
+    "C1233": [
+      "MAIN UNIT::C1233",
+      "RF UNIT::C1233"
+    ],
+    "C1235": [
+      "MAIN UNIT::C1235",
+      "RF UNIT::C1235"
+    ],
+    "C1241": [
+      "MAIN UNIT::C1241",
+      "RF UNIT::C1241"
+    ],
+    "C1242": [
+      "MAIN UNIT::C1242",
+      "RF UNIT::C1242"
+    ],
+    "C125": [
+      "MAIN UNIT::C125",
+      "PA UNIT::C125"
+    ],
+    "C1251": [
+      "MAIN UNIT::C1251",
+      "RF UNIT::C1251",
+      "TUNER UNIT::C1251"
+    ],
+    "C1252": [
+      "MAIN UNIT::C1252",
+      "RF UNIT::C1252"
+    ],
+    "C1253": [
+      "MAIN UNIT::C1253",
+      "RF UNIT::C1253"
+    ],
+    "C1254": [
+      "MAIN UNIT::C1254",
+      "RF UNIT::C1254"
+    ],
+    "C1255": [
+      "MAIN UNIT::C1255",
+      "RF UNIT::C1255"
+    ],
+    "C1256": [
+      "MAIN UNIT::C1256",
+      "RF UNIT::C1256"
+    ],
+    "C1261": [
+      "MAIN UNIT::C1261",
+      "RF UNIT::C1261",
+      "TUNER UNIT::C1261"
+    ],
+    "C1262": [
+      "MAIN UNIT::C1262",
+      "RF UNIT::C1262",
+      "TUNER UNIT::C1262"
+    ],
+    "C1263": [
+      "MAIN UNIT::C1263",
+      "RF UNIT::C1263",
+      "TUNER UNIT::C1263"
+    ],
+    "C1267": [
+      "MAIN UNIT::C1267",
+      "RF UNIT::C1267"
+    ],
+    "C1269": [
+      "MAIN UNIT::C1269",
+      "RF UNIT::C1269"
+    ],
+    "C1270": [
+      "MAIN UNIT::C1270",
+      "RF UNIT::C1270"
+    ],
+    "C1271": [
+      "RF UNIT::C1271",
+      "TUNER UNIT::C1271"
+    ],
+    "C1272": [
+      "RF UNIT::C1272",
+      "TUNER UNIT::C1272"
+    ],
+    "C1277": [
+      "MAIN UNIT::C1277",
+      "RF UNIT::C1277"
+    ],
+    "C1278": [
+      "MAIN UNIT::C1278",
+      "RF UNIT::C1278"
+    ],
+    "C1279": [
+      "MAIN UNIT::C1279",
+      "RF UNIT::C1279"
+    ],
+    "C1294": [
+      "MAIN UNIT::C1294",
+      "RF UNIT::C1294"
+    ],
+    "C1301": [
+      "MAIN UNIT::C1301",
+      "RF UNIT::C1301",
+      "TUNER UNIT::C1301"
+    ],
+    "C1302": [
+      "MAIN UNIT::C1302",
+      "RF UNIT::C1302"
+    ],
+    "C1303": [
+      "MAIN UNIT::C1303",
+      "RF UNIT::C1303"
+    ],
+    "C1311": [
+      "MAIN UNIT::C1311",
+      "RF UNIT::C1311"
+    ],
+    "C1315": [
+      "MAIN UNIT::C1315",
+      "RF UNIT::C1315"
+    ],
+    "C1316": [
+      "MAIN UNIT::C1316",
+      "RF UNIT::C1316"
+    ],
+    "C1317": [
+      "MAIN UNIT::C1317",
+      "RF UNIT::C1317"
+    ],
+    "C1318": [
+      "MAIN UNIT::C1318",
+      "RF UNIT::C1318"
+    ],
+    "C1319": [
+      "MAIN UNIT::C1319",
+      "RF UNIT::C1319"
+    ],
+    "C1321": [
+      "MAIN UNIT::C1321",
+      "RF UNIT::C1321"
+    ],
+    "C1322": [
+      "MAIN UNIT::C1322",
+      "RF UNIT::C1322"
+    ],
+    "C1325": [
+      "MAIN UNIT::C1325",
+      "RF UNIT::C1325"
+    ],
+    "C1326": [
+      "MAIN UNIT::C1326",
+      "RF UNIT::C1326"
+    ],
+    "C135": [
+      "MAIN UNIT::C135",
+      "PA UNIT::C135"
+    ],
+    "C1351": [
+      "MAIN UNIT::C1351",
+      "TUNER UNIT::C1351"
+    ],
+    "C1361": [
+      "MAIN UNIT::C1361",
+      "TUNER UNIT::C1361"
+    ],
+    "C1365": [
+      "MAIN UNIT::C1365",
+      "TUNER UNIT::C1365"
+    ],
+    "C1401": [
+      "MAIN UNIT::C1401",
+      "RF UNIT::C1401"
+    ],
+    "C141": [
+      "MAIN UNIT::C141",
+      "PA UNIT::C141",
+      "DISPLAY UNIT::C141"
+    ],
+    "C142": [
+      "PA UNIT::C142",
+      "DISPLAY UNIT::C142"
+    ],
+    "C143": [
+      "PA UNIT::C143",
+      "DISPLAY UNIT::C143"
+    ],
+    "C144": [
+      "PA UNIT::C144",
+      "DISPLAY UNIT::C144"
+    ],
+    "C1501": [
+      "RF UNIT::C1501",
+      "TUNER UNIT::C1501"
+    ],
+    "C151": [
+      "MAIN UNIT::C151",
+      "PA UNIT::C151",
+      "DISPLAY UNIT::C151"
+    ],
+    "C2": [
+      "MAIN UNIT::C2",
+      "MIC UNIT::C2",
+      "SD UNIT::C2"
+    ],
+    "C201": [
+      "MAIN UNIT::C201",
+      "RF UNIT::C201",
+      "PA UNIT::C201",
+      "DISPLAY UNIT::C201"
+    ],
+    "C202": [
+      "MAIN UNIT::C202",
+      "RF UNIT::C202",
+      "PA UNIT::C202"
+    ],
+    "C203": [
+      "MAIN UNIT::C203",
+      "PA UNIT::C203"
+    ],
+    "C204": [
+      "MAIN UNIT::C204",
+      "PA UNIT::C204"
+    ],
+    "C205": [
+      "MAIN UNIT::C205",
+      "PA UNIT::C205"
+    ],
+    "C206": [
+      "MAIN UNIT::C206",
+      "PA UNIT::C206"
+    ],
+    "C207": [
+      "MAIN UNIT::C207",
+      "PA UNIT::C207"
+    ],
+    "C208": [
+      "MAIN UNIT::C208",
+      "PA UNIT::C208"
+    ],
+    "C212": [
+      "MAIN UNIT::C212",
+      "PA UNIT::C212"
+    ],
+    "C221": [
+      "MAIN UNIT::C221",
+      "PA UNIT::C221"
+    ],
+    "C223": [
+      "MAIN UNIT::C223",
+      "PA UNIT::C223"
+    ],
+    "C3": [
+      "MAIN UNIT::C3",
+      "MIC UNIT::C3"
+    ],
+    "C301": [
+      "MAIN UNIT::C301",
+      "PA UNIT::C301"
+    ],
+    "C302": [
+      "MAIN UNIT::C302",
+      "PA UNIT::C302"
+    ],
+    "C303": [
+      "MAIN UNIT::C303",
+      "PA UNIT::C303"
+    ],
+    "C304": [
+      "MAIN UNIT::C304",
+      "PA UNIT::C304"
+    ],
+    "C305": [
+      "MAIN UNIT::C305",
+      "PA UNIT::C305"
+    ],
+    "C306": [
+      "MAIN UNIT::C306",
+      "PA UNIT::C306"
+    ],
+    "C307": [
+      "MAIN UNIT::C307",
+      "PA UNIT::C307"
+    ],
+    "C308": [
+      "MAIN UNIT::C308",
+      "PA UNIT::C308"
+    ],
+    "C309": [
+      "MAIN UNIT::C309",
+      "PA UNIT::C309"
+    ],
+    "C310": [
+      "MAIN UNIT::C310",
+      "PA UNIT::C310"
+    ],
+    "C311": [
+      "MAIN UNIT::C311",
+      "PA UNIT::C311"
+    ],
+    "C312": [
+      "MAIN UNIT::C312",
+      "PA UNIT::C312"
+    ],
+    "C313": [
+      "MAIN UNIT::C313",
+      "PA UNIT::C313"
+    ],
+    "C314": [
+      "MAIN UNIT::C314",
+      "PA UNIT::C314"
+    ],
+    "C315": [
+      "MAIN UNIT::C315",
+      "PA UNIT::C315"
+    ],
+    "C316": [
+      "MAIN UNIT::C316",
+      "PA UNIT::C316"
+    ],
+    "C317": [
+      "MAIN UNIT::C317",
+      "PA UNIT::C317"
+    ],
+    "C318": [
+      "MAIN UNIT::C318",
+      "PA UNIT::C318"
+    ],
+    "C319": [
+      "MAIN UNIT::C319",
+      "PA UNIT::C319"
+    ],
+    "C320": [
+      "MAIN UNIT::C320",
+      "PA UNIT::C320"
+    ],
+    "C331": [
+      "MAIN UNIT::C331",
+      "PA UNIT::C331"
+    ],
+    "C332": [
+      "MAIN UNIT::C332",
+      "PA UNIT::C332"
+    ],
+    "C333": [
+      "MAIN UNIT::C333",
+      "PA UNIT::C333"
+    ],
+    "C351": [
+      "MAIN UNIT::C351",
+      "PA UNIT::C351"
+    ],
+    "C4": [
+      "MAIN UNIT::C4",
+      "MIC UNIT::C4"
+    ],
+    "C401": [
+      "MAIN UNIT::C401",
+      "PHONE UNIT::C401"
+    ],
+    "C403": [
+      "MAIN UNIT::C403",
+      "DISPLAY UNIT::C403"
+    ],
+    "C404": [
+      "MAIN UNIT::C404",
+      "PHONE UNIT::C404"
+    ],
+    "C452": [
+      "MAIN UNIT::C452",
+      "DISPLAY UNIT::C452"
+    ],
+    "C453": [
+      "MAIN UNIT::C453",
+      "DISPLAY UNIT::C453"
+    ],
+    "C461": [
+      "MAIN UNIT::C461",
+      "DISPLAY UNIT::C461"
+    ],
+    "C51": [
+      "MAIN UNIT::C51",
+      "DISPLAY UNIT::C51"
+    ],
+    "C52": [
+      "MAIN UNIT::C52",
+      "DISPLAY UNIT::C52"
+    ],
+    "C53": [
+      "MAIN UNIT::C53",
+      "DISPLAY UNIT::C53"
+    ],
+    "C54": [
+      "MAIN UNIT::C54",
+      "DISPLAY UNIT::C54"
+    ],
+    "C6": [
+      "MAIN UNIT::C6",
+      "MIC UNIT::C6"
+    ],
+    "C61": [
+      "MAIN UNIT::C61",
+      "DISPLAY UNIT::C61"
+    ],
+    "C611": [
+      "MAIN UNIT::C611",
+      "DISPLAY UNIT::C611"
+    ],
+    "C62": [
+      "MAIN UNIT::C62",
+      "DISPLAY UNIT::C62"
+    ],
+    "C625": [
+      "MAIN UNIT::C625",
+      "DISPLAY UNIT::C625"
+    ],
+    "C626": [
+      "MAIN UNIT::C626",
+      "DISPLAY UNIT::C626"
+    ],
+    "C627": [
+      "MAIN UNIT::C627",
+      "DISPLAY UNIT::C627"
+    ],
+    "C628": [
+      "MAIN UNIT::C628",
+      "DISPLAY UNIT::C628"
+    ],
+    "C71": [
+      "MAIN UNIT::C71",
+      "DISPLAY UNIT::C71"
+    ],
+    "C72": [
+      "MAIN UNIT::C72",
+      "DISPLAY UNIT::C72"
+    ],
+    "C73": [
+      "MAIN UNIT::C73",
+      "DISPLAY UNIT::C73"
+    ],
+    "C771": [
+      "MAIN UNIT::C771",
+      "PA UNIT::C771"
+    ],
+    "C773": [
+      "MAIN UNIT::C773",
+      "PA UNIT::C773"
+    ],
+    "C774": [
+      "MAIN UNIT::C774",
+      "PA UNIT::C774"
+    ],
+    "C775": [
+      "MAIN UNIT::C775",
+      "PA UNIT::C775"
+    ],
+    "C776": [
+      "MAIN UNIT::C776",
+      "PA UNIT::C776"
+    ],
+    "C779": [
+      "MAIN UNIT::C779",
+      "PA UNIT::C779"
+    ],
+    "C781": [
+      "MAIN UNIT::C781",
+      "PA UNIT::C781"
+    ],
+    "C782": [
+      "MAIN UNIT::C782",
+      "PA UNIT::C782"
+    ],
+    "C783": [
+      "MAIN UNIT::C783",
+      "PA UNIT::C783"
+    ],
+    "C8": [
+      "MAIN UNIT::C8",
+      "MIC UNIT::C8"
+    ],
+    "C801": [
+      "MAIN UNIT::C801",
+      "PA UNIT::C801"
+    ],
+    "C811": [
+      "MAIN UNIT::C811",
+      "PA UNIT::C811"
+    ],
+    "C812": [
+      "MAIN UNIT::C812",
+      "PA UNIT::C812"
+    ],
+    "C901": [
+      "MAIN UNIT::C901",
+      "PA UNIT::C901"
+    ],
+    "C902": [
+      "MAIN UNIT::C902",
+      "PA UNIT::C902"
+    ],
+    "C903": [
+      "MAIN UNIT::C903",
+      "PA UNIT::C903"
+    ],
+    "C904": [
+      "MAIN UNIT::C904",
+      "PA UNIT::C904"
+    ],
+    "C905": [
+      "MAIN UNIT::C905",
+      "PA UNIT::C905"
+    ],
+    "C906": [
+      "MAIN UNIT::C906",
+      "PA UNIT::C906"
+    ],
+    "C907": [
+      "MAIN UNIT::C907",
+      "PA UNIT::C907"
+    ],
+    "C908": [
+      "MAIN UNIT::C908",
+      "PA UNIT::C908"
+    ],
+    "C909": [
+      "MAIN UNIT::C909",
+      "PA UNIT::C909"
+    ],
+    "C911": [
+      "MAIN UNIT::C911",
+      "PA UNIT::C911"
+    ],
+    "C921": [
+      "MAIN UNIT::C921",
+      "PA UNIT::C921"
+    ],
+    "C922": [
+      "MAIN UNIT::C922",
+      "PA UNIT::C922"
+    ],
+    "C923": [
+      "MAIN UNIT::C923",
+      "PA UNIT::C923"
+    ],
+    "C924": [
+      "MAIN UNIT::C924",
+      "PA UNIT::C924"
+    ],
+    "C925": [
+      "MAIN UNIT::C925",
+      "PA UNIT::C925"
+    ],
+    "C926": [
+      "MAIN UNIT::C926",
+      "PA UNIT::C926"
+    ],
+    "C927": [
+      "MAIN UNIT::C927",
+      "PA UNIT::C927"
+    ],
+    "C928": [
+      "MAIN UNIT::C928",
+      "PA UNIT::C928"
+    ],
+    "C929": [
+      "MAIN UNIT::C929",
+      "PA UNIT::C929"
+    ],
+    "C931": [
+      "MAIN UNIT::C931",
+      "PA UNIT::C931"
+    ],
+    "C933": [
+      "MAIN UNIT::C933",
+      "PA UNIT::C933"
+    ],
+    "C934": [
+      "MAIN UNIT::C934",
+      "PA UNIT::C934"
+    ],
+    "C941": [
+      "MAIN UNIT::C941",
+      "PA UNIT::C941"
+    ],
+    "C944": [
+      "MAIN UNIT::C944",
+      "PA UNIT::C944"
+    ],
+    "C945": [
+      "MAIN UNIT::C945",
+      "PA UNIT::C945"
+    ],
+    "C946": [
+      "MAIN UNIT::C946",
+      "PA UNIT::C946"
+    ],
+    "C949": [
+      "MAIN UNIT::C949",
+      "PA UNIT::C949"
+    ],
+    "C950": [
+      "MAIN UNIT::C950",
+      "PA UNIT::C950"
+    ],
+    "C951": [
+      "MAIN UNIT::C951",
+      "PA UNIT::C951"
+    ],
+    "C953": [
+      "MAIN UNIT::C953",
+      "PA UNIT::C953"
+    ],
+    "C954": [
+      "MAIN UNIT::C954",
+      "PA UNIT::C954"
+    ],
+    "C961": [
+      "MAIN UNIT::C961",
+      "PA UNIT::C961"
+    ],
+    "C962": [
+      "MAIN UNIT::C962",
+      "PA UNIT::C962"
+    ],
+    "C971": [
+      "MAIN UNIT::C971",
+      "PA UNIT::C971"
+    ],
+    "C972": [
+      "MAIN UNIT::C972",
+      "PA UNIT::C972"
+    ],
+    "D101": [
+      "RF UNIT::D101",
+      "PA UNIT::D101",
+      "DISPLAY UNIT::D101"
+    ],
+    "D1021": [
+      "RF UNIT::D1021",
+      "TUNER UNIT::D1021"
+    ],
+    "D1201": [
+      "RF UNIT::D1201",
+      "TUNER UNIT::D1201"
+    ],
+    "D1231": [
+      "MAIN UNIT::D1231",
+      "RF UNIT::D1231"
+    ],
+    "D1232": [
+      "MAIN UNIT::D1232",
+      "RF UNIT::D1232"
+    ],
+    "D1261": [
+      "RF UNIT::D1261",
+      "TUNER UNIT::D1261"
+    ],
+    "D401": [
+      "MAIN UNIT::D401",
+      "DISPLAY UNIT::D401"
+    ],
+    "D801": [
+      "MAIN UNIT::D801",
+      "PA UNIT::D801"
+    ],
+    "DS1": [
+      "FRONT UNIT::DS1",
+      "DISPLAY UNIT::DS1"
+    ],
+    "EP1": [
+      "MAIN UNIT::EP1",
+      "FRONT UNIT::EP1"
+    ],
+    "EP11": [
+      "MAIN UNIT::EP11",
+      "MIC UNIT::EP11"
+    ],
+    "EP111": [
+      "MAIN UNIT::EP111",
+      "PA UNIT::EP111"
+    ],
+    "EP121": [
+      "MAIN UNIT::EP121",
+      "PA UNIT::EP121"
+    ],
+    "EP1315": [
+      "MAIN UNIT::EP1315",
+      "RF UNIT::EP1315"
+    ],
+    "EP2": [
+      "MAIN UNIT::EP2",
+      "MIC UNIT::EP2"
+    ],
+    "EP201": [
+      "MAIN UNIT::EP201",
+      "RF UNIT::EP201"
+    ],
+    "EP202": [
+      "MAIN UNIT::EP202",
+      "RF UNIT::EP202"
+    ],
+    "EP3": [
+      "MAIN UNIT::EP3",
+      "MIC UNIT::EP3"
+    ],
+    "EP301": [
+      "MAIN UNIT::EP301",
+      "PA UNIT::EP301"
+    ],
+    "EP302": [
+      "MAIN UNIT::EP302",
+      "PA UNIT::EP302"
+    ],
+    "EP303": [
+      "MAIN UNIT::EP303",
+      "PA UNIT::EP303"
+    ],
+    "EP401": [
+      "DISPLAY UNIT::EP401",
+      "PHONE UNIT::EP401"
+    ],
+    "EP402": [
+      "DISPLAY UNIT::EP402",
+      "PHONE UNIT::EP402"
+    ],
+    "EP5": [
+      "MAIN UNIT::EP5",
+      "MIC UNIT::EP5"
+    ],
+    "EP601": [
+      "MAIN UNIT::EP601",
+      "DISPLAY UNIT::EP601"
+    ],
+    "EP7": [
+      "MAIN UNIT::EP7",
+      "MIC UNIT::EP7",
+      "SD UNIT::EP7"
+    ],
+    "EP9": [
+      "MAIN UNIT::EP9",
+      "MIC UNIT::EP9"
+    ],
+    "IC211": [
+      "MAIN UNIT::IC211",
+      "PA UNIT::IC211"
+    ],
+    "IC221": [
+      "MAIN UNIT::IC221",
+      "PA UNIT::IC221"
+    ],
+    "J1": [
+      "MAIN UNIT::J1",
+      "PBT UNIT::J1",
+      "VR UNIT::J1",
+      "RIT UNIT::J1",
+      "PHONE UNIT::J1",
+      "MIC UNIT::J1",
+      "SD UNIT::J1"
+    ],
+    "J1001": [
+      "RF UNIT::J1001",
+      "TUNER UNIT::J1001"
+    ],
+    "J101": [
+      "MAIN UNIT::J101",
+      "RF UNIT::J101",
+      "PA UNIT::J101",
+      "DISPLAY UNIT::J101"
+    ],
+    "J2": [
+      "MIC UNIT::J2",
+      "SD UNIT::J2"
+    ],
+    "J201": [
+      "RF UNIT::J201",
+      "DISPLAY UNIT::J201"
+    ],
+    "J301": [
+      "PA UNIT::J301",
+      "DISPLAY UNIT::J301"
+    ],
+    "J51": [
+      "MAIN UNIT::J51",
+      "DISPLAY UNIT::J51"
+    ],
+    "J601": [
+      "MAIN UNIT::J601",
+      "DISPLAY UNIT::J601"
+    ],
+    "J71": [
+      "MAIN UNIT::J71",
+      "DISPLAY UNIT::J71"
+    ],
+    "L101": [
+      "PA UNIT::L101",
+      "DISPLAY UNIT::L101"
+    ],
+    "L1231": [
+      "MAIN UNIT::L1231",
+      "RF UNIT::L1231"
+    ],
+    "L1233": [
+      "MAIN UNIT::L1233",
+      "RF UNIT::L1233"
+    ],
+    "L1261": [
+      "MAIN UNIT::L1261",
+      "RF UNIT::L1261"
+    ],
+    "Q1001": [
+      "MAIN UNIT::Q1001",
+      "RF UNIT::Q1001"
+    ],
+    "Q101": [
+      "RF UNIT::Q101",
+      "PA UNIT::Q101"
+    ],
+    "Q111": [
+      "MAIN UNIT::Q111",
+      "PA UNIT::Q111"
+    ],
+    "Q1201": [
+      "MAIN UNIT::Q1201",
+      "RF UNIT::Q1201"
+    ],
+    "Q1231": [
+      "MAIN UNIT::Q1231",
+      "RF UNIT::Q1231"
+    ],
+    "R1": [
+      "DISPLAY UNIT::R1",
+      "VR UNIT::R1",
+      "SD UNIT::R1"
+    ],
+    "R1001": [
+      "MAIN UNIT::R1001",
+      "RF UNIT::R1001"
+    ],
+    "R1002": [
+      "MAIN UNIT::R1002",
+      "RF UNIT::R1002"
+    ],
+    "R1003": [
+      "MAIN UNIT::R1003",
+      "RF UNIT::R1003"
+    ],
+    "R1004": [
+      "MAIN UNIT::R1004",
+      "RF UNIT::R1004"
+    ],
+    "R101": [
+      "MAIN UNIT::R101",
+      "RF UNIT::R101",
+      "PA UNIT::R101",
+      "DISPLAY UNIT::R101"
+    ],
+    "R1011": [
+      "MAIN UNIT::R1011",
+      "RF UNIT::R1011",
+      "TUNER UNIT::R1011"
+    ],
+    "R1016": [
+      "MAIN UNIT::R1016",
+      "RF UNIT::R1016"
+    ],
+    "R102": [
+      "MAIN UNIT::R102",
+      "RF UNIT::R102",
+      "PA UNIT::R102",
+      "DISPLAY UNIT::R102"
+    ],
+    "R1021": [
+      "MAIN UNIT::R1021",
+      "RF UNIT::R1021",
+      "TUNER UNIT::R1021"
+    ],
+    "R1022": [
+      "MAIN UNIT::R1022",
+      "RF UNIT::R1022"
+    ],
+    "R103": [
+      "MAIN UNIT::R103",
+      "RF UNIT::R103",
+      "PA UNIT::R103",
+      "DISPLAY UNIT::R103"
+    ],
+    "R1031": [
+      "RF UNIT::R1031",
+      "TUNER UNIT::R1031"
+    ],
+    "R104": [
+      "MAIN UNIT::R104",
+      "PA UNIT::R104"
+    ],
+    "R105": [
+      "MAIN UNIT::R105",
+      "PA UNIT::R105"
+    ],
+    "R107": [
+      "MAIN UNIT::R107",
+      "PA UNIT::R107"
+    ],
+    "R108": [
+      "MAIN UNIT::R108",
+      "PA UNIT::R108"
+    ],
+    "R109": [
+      "MAIN UNIT::R109",
+      "PA UNIT::R109"
+    ],
+    "R111": [
+      "MAIN UNIT::R111",
+      "PA UNIT::R111"
+    ],
+    "R112": [
+      "MAIN UNIT::R112",
+      "PA UNIT::R112"
+    ],
+    "R113": [
+      "MAIN UNIT::R113",
+      "PA UNIT::R113"
+    ],
+    "R12": [
+      "MAIN UNIT::R12",
+      "DISPLAY UNIT::R12"
+    ],
+    "R1201": [
+      "MAIN UNIT::R1201",
+      "RF UNIT::R1201"
+    ],
+    "R1202": [
+      "MAIN UNIT::R1202",
+      "RF UNIT::R1202",
+      "TUNER UNIT::R1202"
+    ],
+    "R1203": [
+      "MAIN UNIT::R1203",
+      "RF UNIT::R1203",
+      "TUNER UNIT::R1203"
+    ],
+    "R121": [
+      "MAIN UNIT::R121",
+      "PA UNIT::R121"
+    ],
+    "R1211": [
+      "MAIN UNIT::R1211",
+      "RF UNIT::R1211"
+    ],
+    "R1212": [
+      "MAIN UNIT::R1212",
+      "RF UNIT::R1212"
+    ],
+    "R1213": [
+      "MAIN UNIT::R1213",
+      "RF UNIT::R1213"
+    ],
+    "R122": [
+      "MAIN UNIT::R122",
+      "PA UNIT::R122"
+    ],
+    "R1221": [
+      "MAIN UNIT::R1221",
+      "RF UNIT::R1221"
+    ],
+    "R1222": [
+      "MAIN UNIT::R1222",
+      "RF UNIT::R1222"
+    ],
+    "R1223": [
+      "MAIN UNIT::R1223",
+      "RF UNIT::R1223"
+    ],
+    "R123": [
+      "MAIN UNIT::R123",
+      "PA UNIT::R123"
+    ],
+    "R1231": [
+      "MAIN UNIT::R1231",
+      "RF UNIT::R1231"
+    ],
+    "R1232": [
+      "MAIN UNIT::R1232",
+      "RF UNIT::R1232"
+    ],
+    "R1233": [
+      "MAIN UNIT::R1233",
+      "RF UNIT::R1233"
+    ],
+    "R125": [
+      "MAIN UNIT::R125",
+      "PA UNIT::R125"
+    ],
+    "R1251": [
+      "MAIN UNIT::R1251",
+      "TUNER UNIT::R1251"
+    ],
+    "R1252": [
+      "MAIN UNIT::R1252",
+      "TUNER UNIT::R1252"
+    ],
+    "R1261": [
+      "MAIN UNIT::R1261",
+      "RF UNIT::R1261",
+      "TUNER UNIT::R1261"
+    ],
+    "R1263": [
+      "RF UNIT::R1263",
+      "TUNER UNIT::R1263"
+    ],
+    "R13": [
+      "MAIN UNIT::R13",
+      "DISPLAY UNIT::R13"
+    ],
+    "R131": [
+      "MAIN UNIT::R131",
+      "PA UNIT::R131"
+    ],
+    "R1313": [
+      "MAIN UNIT::R1313",
+      "RF UNIT::R1313"
+    ],
+    "R1314": [
+      "MAIN UNIT::R1314",
+      "RF UNIT::R1314"
+    ],
+    "R1315": [
+      "MAIN UNIT::R1315",
+      "RF UNIT::R1315"
+    ],
+    "R1316": [
+      "MAIN UNIT::R1316",
+      "RF UNIT::R1316"
+    ],
+    "R1318": [
+      "MAIN UNIT::R1318",
+      "RF UNIT::R1318"
+    ],
+    "R132": [
+      "MAIN UNIT::R132",
+      "PA UNIT::R132"
+    ],
+    "R133": [
+      "MAIN UNIT::R133",
+      "PA UNIT::R133"
+    ],
+    "R134": [
+      "MAIN UNIT::R134",
+      "PA UNIT::R134"
+    ],
+    "R135": [
+      "MAIN UNIT::R135",
+      "PA UNIT::R135"
+    ],
+    "R1351": [
+      "MAIN UNIT::R1351",
+      "TUNER UNIT::R1351"
+    ],
+    "R136": [
+      "MAIN UNIT::R136",
+      "PA UNIT::R136"
+    ],
+    "R1361": [
+      "MAIN UNIT::R1361",
+      "TUNER UNIT::R1361"
+    ],
+    "R137": [
+      "MAIN UNIT::R137",
+      "PA UNIT::R137"
+    ],
+    "R138": [
+      "MAIN UNIT::R138",
+      "PA UNIT::R138"
+    ],
+    "R139": [
+      "MAIN UNIT::R139",
+      "PA UNIT::R139"
+    ],
+    "R1401": [
+      "MAIN UNIT::R1401",
+      "RF UNIT::R1401",
+      "TUNER UNIT::R1401"
+    ],
+    "R1402": [
+      "RF UNIT::R1402",
+      "TUNER UNIT::R1402"
+    ],
+    "R141": [
+      "PA UNIT::R141",
+      "DISPLAY UNIT::R141"
+    ],
+    "R1411": [
+      "RF UNIT::R1411",
+      "TUNER UNIT::R1411"
+    ],
+    "R1412": [
+      "RF UNIT::R1412",
+      "TUNER UNIT::R1412"
+    ],
+    "R142": [
+      "PA UNIT::R142",
+      "DISPLAY UNIT::R142"
+    ],
+    "R1421": [
+      "RF UNIT::R1421",
+      "TUNER UNIT::R1421"
+    ],
+    "R1422": [
+      "RF UNIT::R1422",
+      "TUNER UNIT::R1422"
+    ],
+    "R143": [
+      "PA UNIT::R143",
+      "DISPLAY UNIT::R143"
+    ],
+    "R1431": [
+      "RF UNIT::R1431",
+      "TUNER UNIT::R1431"
+    ],
+    "R1432": [
+      "RF UNIT::R1432",
+      "TUNER UNIT::R1432"
+    ],
+    "R144": [
+      "PA UNIT::R144",
+      "DISPLAY UNIT::R144"
+    ],
+    "R1501": [
+      "RF UNIT::R1501",
+      "TUNER UNIT::R1501"
+    ],
+    "R1502": [
+      "RF UNIT::R1502",
+      "TUNER UNIT::R1502"
+    ],
+    "R1503": [
+      "RF UNIT::R1503",
+      "TUNER UNIT::R1503"
+    ],
+    "R1504": [
+      "RF UNIT::R1504",
+      "TUNER UNIT::R1504"
+    ],
+    "R1505": [
+      "RF UNIT::R1505",
+      "TUNER UNIT::R1505"
+    ],
+    "R2": [
+      "DISPLAY UNIT::R2",
+      "SD UNIT::R2"
+    ],
+    "R201": [
+      "RF UNIT::R201",
+      "DISPLAY UNIT::R201"
+    ],
+    "R202": [
+      "MAIN UNIT::R202",
+      "DISPLAY UNIT::R202"
+    ],
+    "R203": [
+      "MAIN UNIT::R203",
+      "DISPLAY UNIT::R203"
+    ],
+    "R204": [
+      "MAIN UNIT::R204",
+      "DISPLAY UNIT::R204"
+    ],
+    "R221": [
+      "MAIN UNIT::R221",
+      "PA UNIT::R221"
+    ],
+    "R223": [
+      "MAIN UNIT::R223",
+      "PA UNIT::R223"
+    ],
+    "R225": [
+      "MAIN UNIT::R225",
+      "PA UNIT::R225"
+    ],
+    "R24": [
+      "MAIN UNIT::R24",
+      "DISPLAY UNIT::R24"
+    ],
+    "R3": [
+      "DISPLAY UNIT::R3",
+      "SD UNIT::R3"
+    ],
+    "R301": [
+      "PA UNIT::R301",
+      "DISPLAY UNIT::R301"
+    ],
+    "R302": [
+      "MAIN UNIT::R302",
+      "PA UNIT::R302",
+      "DISPLAY UNIT::R302"
+    ],
+    "R303": [
+      "MAIN UNIT::R303",
+      "PA UNIT::R303",
+      "DISPLAY UNIT::R303"
+    ],
+    "R304": [
+      "MAIN UNIT::R304",
+      "PA UNIT::R304"
+    ],
+    "R305": [
+      "MAIN UNIT::R305",
+      "PA UNIT::R305"
+    ],
+    "R308": [
+      "MAIN UNIT::R308",
+      "PA UNIT::R308"
+    ],
+    "R31": [
+      "MAIN UNIT::R31",
+      "DISPLAY UNIT::R31"
+    ],
+    "R351": [
+      "MAIN UNIT::R351",
+      "PA UNIT::R351"
+    ],
+    "R352": [
+      "MAIN UNIT::R352",
+      "PA UNIT::R352"
+    ],
+    "R4": [
+      "MAIN UNIT::R4",
+      "SD UNIT::R4"
+    ],
+    "R401": [
+      "MAIN UNIT::R401",
+      "DISPLAY UNIT::R401",
+      "PHONE UNIT::R401"
+    ],
+    "R41": [
+      "MAIN UNIT::R41",
+      "DISPLAY UNIT::R41"
+    ],
+    "R491": [
+      "MAIN UNIT::R491",
+      "DISPLAY UNIT::R491"
+    ],
+    "R492": [
+      "MAIN UNIT::R492",
+      "DISPLAY UNIT::R492"
+    ],
+    "R493": [
+      "MAIN UNIT::R493",
+      "DISPLAY UNIT::R493"
+    ],
+    "R501": [
+      "MAIN UNIT::R501",
+      "DISPLAY UNIT::R501"
+    ],
+    "R502": [
+      "MAIN UNIT::R502",
+      "DISPLAY UNIT::R502"
+    ],
+    "R503": [
+      "MAIN UNIT::R503",
+      "DISPLAY UNIT::R503"
+    ],
+    "R504": [
+      "MAIN UNIT::R504",
+      "DISPLAY UNIT::R504"
+    ],
+    "R53": [
+      "MAIN UNIT::R53",
+      "DISPLAY UNIT::R53"
+    ],
+    "R54": [
+      "MAIN UNIT::R54",
+      "DISPLAY UNIT::R54"
+    ],
+    "R601": [
+      "MAIN UNIT::R601",
+      "DISPLAY UNIT::R601"
+    ],
+    "R621": [
+      "MAIN UNIT::R621",
+      "DISPLAY UNIT::R621"
+    ],
+    "R622": [
+      "MAIN UNIT::R622",
+      "DISPLAY UNIT::R622"
+    ],
+    "R623": [
+      "MAIN UNIT::R623",
+      "DISPLAY UNIT::R623"
+    ],
+    "R624": [
+      "MAIN UNIT::R624",
+      "DISPLAY UNIT::R624"
+    ],
+    "R625": [
+      "MAIN UNIT::R625",
+      "DISPLAY UNIT::R625"
+    ],
+    "R71": [
+      "MAIN UNIT::R71",
+      "DISPLAY UNIT::R71"
+    ],
+    "R72": [
+      "MAIN UNIT::R72",
+      "DISPLAY UNIT::R72"
+    ],
+    "R73": [
+      "MAIN UNIT::R73",
+      "DISPLAY UNIT::R73"
+    ],
+    "R811": [
+      "MAIN UNIT::R811",
+      "PA UNIT::R811"
+    ],
+    "R812": [
+      "MAIN UNIT::R812",
+      "PA UNIT::R812"
+    ],
+    "R981": [
+      "MAIN UNIT::R981",
+      "PA UNIT::R981"
+    ],
+    "R982": [
+      "MAIN UNIT::R982",
+      "PA UNIT::R982"
+    ],
+    "R991": [
+      "MAIN UNIT::R991",
+      "PA UNIT::R991"
+    ],
+    "R992": [
+      "MAIN UNIT::R992",
+      "PA UNIT::R992"
+    ],
+    "S1": [
+      "DISPLAY UNIT::S1",
+      "PBT UNIT::S1",
+      "RIT UNIT::S1"
+    ]
+  },
+  "boards": {
+    "DISPLAY UNIT": 190,
+    "FRONT UNIT": 2,
+    "MAIN UNIT": 1205,
+    "MIC UNIT": 19,
+    "PA UNIT": 408,
+    "PBT UNIT": 2,
+    "PHONE UNIT": 9,
+    "RF UNIT": 595,
+    "RIT UNIT": 2,
+    "SD UNIT": 13,
+    "TUNER UNIT": 350,
+    "VR UNIT": 2
+  }
+}

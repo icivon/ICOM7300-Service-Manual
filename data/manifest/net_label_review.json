@@ -1,0 +1,9 @@
+{
+  "reviewed_out": [
+    "LRB551V",
+    "R3V"
+  ],
+  "reason": "LRB551V 为二极管型号，R3V 为文字层碎片；其余候选均带 nominal_is_inferred 标记。",
+  "candidate_count": 31,
+  "accepted_count": 29
+}

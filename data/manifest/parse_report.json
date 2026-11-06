@@ -1,0 +1,27 @@
+{
+  "pages_parsed": [
+    22,
+    40
+  ],
+  "records": 2797,
+  "boards": {
+    "DISPLAY UNIT": 190,
+    "FRONT UNIT": 2,
+    "MAIN UNIT": 1205,
+    "MIC UNIT": 19,
+    "PA UNIT": 408,
+    "PBT UNIT": 2,
+    "PHONE UNIT": 9,
+    "RF UNIT": 595,
+    "RIT UNIT": 2,
+    "SD UNIT": 13,
+    "TUNER UNIT": 350,
+    "VR UNIT": 2
+  },
+  "rows_with_location": 2666,
+  "rows_without_location": 131,
+  "duplicate_rows_skipped": 0,
+  "duplicates_sample": [],
+  "unresolved_rows": 0,
+  "unresolved_sample": []
+}

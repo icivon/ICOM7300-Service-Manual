@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/icom7300/entities.schema.json",
+  "title": "IC-7300 service-manual derived data contract",
+  "description": "Device-agnostic contract. Records are validated by tools/validate.py without third-party dependencies; this schema is the portable documentation of that contract.",
+  "type": "object",
+  "$defs": {
+    "coverage": {
+      "enum": ["manual", "derived", "not_in_manual"],
+      "description": "manual = verbatim from the PDF text layer; derived = engineering inference built on manual evidence; not_in_manual = requested data the manual does not contain"
+    },
+    "source": {
+      "type": "object",
+      "required": ["section", "page", "raw_text"],
+      "properties": {
+        "section": {"type": "string"},
+        "page": {"type": "integer", "minimum": 1, "maximum": 75},
+        "raw_text": {"type": "string", "minLength": 1},
+        "note": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "component": {
+      "type": "object",
+      "required": ["ref", "board", "ref_key", "part_no", "description", "source", "coverage"],
+      "properties": {
+        "ref": {"type": "string", "pattern": "^[A-Z]{1,3}[0-9]{1,5}[A-Z]?$"},
+        "board": {"type": "string"},
+        "ref_key": {"type": "string"},
+        "part_no": {"type": "string"},
+        "description": {"type": "string"},
+        "mounted_side": {"enum": ["T", "B", null]},
+        "location": {
+          "type": ["object", "null"],
+          "properties": {"x": {"type": "number"}, "y": {"type": "number"}}
+        },
+        "schematic_pages": {"type": "array", "items": {"type": "integer"}},
+        "board_layout_pages": {"type": "array", "items": {"type": "integer"}},
+        "coverage": {"$ref": "#/$defs/coverage"},
+        "source": {"$ref": "#/$defs/source"}
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "required": ["id", "kind", "name", "value", "unit", "coverage", "source"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {
+          "enum": ["power_supply_spec", "regulator_rail", "net_label", "adjustment_target", "test_point"]
+        },
+        "name": {"type": "string"},
+        "value": {"type": ["number", "string", "null"]},
+        "unit": {"type": ["string", "null"]},
+        "normal_voltage": {"type": ["number", "null"]},
+        "circuit": {"type": ["string", "null"]},
+        "coverage": {"$ref": "#/$defs/coverage"},
+        "source": {"$ref": "#/$defs/source"},
+        "note": {"type": "string"}
+      }
+    },
+    "net_label": {
+      "type": "object",
+      "required": ["name", "nominal_volt", "nominal_is_inferred", "coverage", "source"],
+      "properties": {
+        "name": {"type": "string"},
+        "nominal_volt": {"type": ["number", "null"]},
+        "nominal_is_inferred": {"type": "boolean"},
+        "pages": {"type": "array", "items": {"type": "integer"}},
+        "coverage": {"$ref": "#/$defs/coverage"},
+        "source": {"$ref": "#/$defs/source"},
+        "note": {"type": "string"}
+      }
+    },
+    "signal_node": {
+      "type": "object",
+      "required": ["direction", "order", "stage", "board", "coverage", "evidence"],
+      "properties": {
+        "direction": {"enum": ["RX", "TX"]},
+        "order": {"type": "integer", "minimum": 1},
+        "stage": {"type": "string"},
+        "board": {"type": "string"},
+        "refs": {"type": "array", "items": {"type": "string"}},
+        "coverage": {"$ref": "#/$defs/coverage"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/source"}}
+      }
+    },
+    "fault": {
+      "type": "object",
+      "required": ["id", "symptom", "aliases", "suspects", "steps", "coverage", "reasoning_basis"],
+      "properties": {
+        "id": {"type": "string"},
+        "symptom": {"type": "string"},
+        "aliases": {"type": "array", "items": {"type": "string"}},
+        "suspects": {"type": "array", "items": {"type": "string"}},
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["order", "action", "evidence"],
+            "properties": {
+              "order": {"type": "integer"},
+              "action": {"type": "string"},
+              "evidence": {"type": "array", "items": {"type": "object"}}
+            }
+          }
+        },
+        "coverage": {"const": "derived"},
+        "reasoning_basis": {"type": "string"},
+        "manual_gaps": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "properties": {
+    "component": {"$ref": "#/$defs/component"},
+    "measurement": {"$ref": "#/$defs/measurement"},
+    "net_label": {"$ref": "#/$defs/net_label"},
+    "signal_node": {"$ref": "#/$defs/signal_node"},
+    "fault": {"$ref": "#/$defs/fault"}
+  }
+}

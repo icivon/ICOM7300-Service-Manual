@@ -1,0 +1,167 @@
+{
+  "note": "CP* check points found in diagram pages. The manual gives no normal voltage for these.",
+  "check_points": {
+    "CP1": {
+      "pages": [
+        62
+      ],
+      "raw_text": "CP1"
+    },
+    "CP1001": {
+      "pages": [
+        66
+      ],
+      "raw_text": "CP1001"
+    },
+    "CP121": {
+      "pages": [
+        63
+      ],
+      "raw_text": "CP121"
+    },
+    "CP122": {
+      "pages": [
+        63
+      ],
+      "raw_text": "CP122"
+    },
+    "CP1304": {
+      "pages": [
+        67
+      ],
+      "raw_text": "CP1304"
+    },
+    "CP1305": {
+      "pages": [
+        67
+      ],
+      "raw_text": "CP1305"
+    },
+    "CP1306": {
+      "pages": [
+        67
+      ],
+      "raw_text": "CP1306"
+    },
+    "CP1333": {
+      "pages": [
+        67
+      ],
+      "raw_text": "CP1333"
+    },
+    "CP1334": {
+      "pages": [
+        67
+      ],
+      "raw_text": "CP1334"
+    },
+    "CP1335": {
+      "pages": [
+        67
+      ],
+      "raw_text": "CP1335"
+    },
+    "CP1356": {
+      "pages": [
+        68
+      ],
+      "raw_text": "CP1356"
+    },
+    "CP1357": {
+      "pages": [
+        68
+      ],
+      "raw_text": "CP1357"
+    },
+    "CP1358": {
+      "pages": [
+        68
+      ],
+      "raw_text": "CP1358"
+    },
+    "CP1359": {
+      "pages": [
+        68
+      ],
+      "raw_text": "CP1359"
+    },
+    "CP151": {
+      "pages": [
+        63
+      ],
+      "raw_text": "CP151"
+    },
+    "CP691": {
+      "pages": [
+        65
+      ],
+      "raw_text": "CP691"
+    },
+    "CP692": {
+      "pages": [
+        65
+      ],
+      "raw_text": "CP692"
+    },
+    "CP693": {
+      "pages": [
+        65
+      ],
+      "raw_text": "CP693"
+    },
+    "CP711": {
+      "pages": [
+        65
+      ],
+      "raw_text": "CP711"
+    },
+    "CP712": {
+      "pages": [
+        65
+      ],
+      "raw_text": "CP712"
+    },
+    "CP741": {
+      "pages": [
+        65
+      ],
+      "raw_text": "CP741"
+    },
+    "CP772": {
+      "pages": [
+        65
+      ],
+      "raw_text": "CP772"
+    },
+    "CP901": {
+      "pages": [
+        66
+      ],
+      "raw_text": "CP901"
+    },
+    "CP902": {
+      "pages": [
+        66
+      ],
+      "raw_text": "CP902"
+    },
+    "CP971": {
+      "pages": [
+        66
+      ],
+      "raw_text": "CP971"
+    },
+    "CP981": {
+      "pages": [
+        73
+      ],
+      "raw_text": "CP981"
+    },
+    "CP982": {
+      "pages": [
+        73
+      ],
+      "raw_text": "CP982"
+    }
+  }
+}

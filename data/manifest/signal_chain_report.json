@@ -1,0 +1,29 @@
+{
+  "dropped_refs": [
+    {
+      "direction": "RX",
+      "order": 2,
+      "ref": "Q1212",
+      "reason": "not in SECTION 5 parts list"
+    },
+    {
+      "direction": "RX",
+      "order": 2,
+      "ref": "Q1213",
+      "reason": "not in SECTION 5 parts list"
+    },
+    {
+      "direction": "RX",
+      "order": 3,
+      "ref": "Q1212",
+      "reason": "not in SECTION 5 parts list"
+    },
+    {
+      "direction": "RX",
+      "order": 3,
+      "ref": "Q1213",
+      "reason": "not in SECTION 5 parts list"
+    }
+  ],
+  "missing_evidence": []
+}

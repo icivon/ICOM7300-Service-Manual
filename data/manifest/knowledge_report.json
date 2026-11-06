@@ -1,0 +1,9 @@
+{
+  "missing_literals": [],
+  "counts": {
+    "net_labels": 29,
+    "measurements": 49,
+    "signal_nodes": 16,
+    "manual_gaps": 8
+  }
+}

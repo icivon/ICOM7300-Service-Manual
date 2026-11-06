@@ -1,0 +1,287 @@
+{
+  "note": "Candidates extracted from SECTION 7-10 word tokens. These are POWER NET LABELS, not measured voltages. Requires review before becoming net_labels.jsonl.",
+  "candidates": {
+    "3R3V": {
+      "count": 54,
+      "pages": [
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "raw_text": "3R3V"
+    },
+    "14V": {
+      "count": 42,
+      "pages": [
+        59,
+        60,
+        63,
+        65,
+        66,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "raw_text": "14V"
+    },
+    "8V": {
+      "count": 37,
+      "pages": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        69
+      ],
+      "raw_text": "8V"
+    },
+    "H3R3V": {
+      "count": 21,
+      "pages": [
+        60,
+        63,
+        64,
+        65
+      ],
+      "raw_text": "H3R3V"
+    },
+    "5V": {
+      "count": 18,
+      "pages": [
+        58,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        69
+      ],
+      "raw_text": "5V"
+    },
+    "T9V": {
+      "count": 9,
+      "pages": [
+        59,
+        72,
+        73
+      ],
+      "raw_text": "T9V"
+    },
+    "P9V": {
+      "count": 7,
+      "pages": [
+        59,
+        72,
+        73
+      ],
+      "raw_text": "P9V"
+    },
+    "HFID1V": {
+      "count": 7,
+      "pages": [
+        60,
+        63,
+        72
+      ],
+      "raw_text": "HFID1V"
+    },
+    "HFID2V": {
+      "count": 6,
+      "pages": [
+        60,
+        63,
+        72
+      ],
+      "raw_text": "HFID2V"
+    },
+    "F3R3V": {
+      "count": 6,
+      "pages": [
+        68
+      ],
+      "raw_text": "F3R3V"
+    },
+    "H1R18V": {
+      "count": 5,
+      "pages": [
+        60,
+        63,
+        64
+      ],
+      "raw_text": "H1R18V"
+    },
+    "2R5V": {
+      "count": 4,
+      "pages": [
+        60,
+        63,
+        68
+      ],
+      "raw_text": "2R5V"
+    },
+    "H4V": {
+      "count": 4,
+      "pages": [
+        60,
+        63,
+        65
+      ],
+      "raw_text": "H4V"
+    },
+    "T5V": {
+      "count": 3,
+      "pages": [
+        59,
+        69
+      ],
+      "raw_text": "T5V"
+    },
+    "+8V": {
+      "count": 3,
+      "pages": [
+        60,
+        62
+      ],
+      "raw_text": "+8V"
+    },
+    "USB3R3V": {
+      "count": 3,
+      "pages": [
+        60,
+        65
+      ],
+      "raw_text": "USB3R3V"
+    },
+    "AD5V": {
+      "count": 3,
+      "pages": [
+        60,
+        66
+      ],
+      "raw_text": "AD5V"
+    },
+    "1R2V": {
+      "count": 3,
+      "pages": [
+        63,
+        66,
+        68
+      ],
+      "raw_text": "1R2V"
+    },
+    "F2R5V": {
+      "count": 3,
+      "pages": [
+        68
+      ],
+      "raw_text": "F2R5V"
+    },
+    "VDD(3R3V)": {
+      "count": 2,
+      "pages": [
+        58,
+        63
+      ],
+      "raw_text": "VDD(3R3V)"
+    },
+    "+5V": {
+      "count": 2,
+      "pages": [
+        60
+      ],
+      "raw_text": "+5V"
+    },
+    "F8V": {
+      "count": 2,
+      "pages": [
+        60,
+        63
+      ],
+      "raw_text": "F8V"
+    },
+    "+3V": {
+      "count": 1,
+      "pages": [
+        60
+      ],
+      "raw_text": "+3V"
+    },
+    "ACC8V": {
+      "count": 1,
+      "pages": [
+        60
+      ],
+      "raw_text": "ACC8V"
+    },
+    "RFD3R3V": {
+      "count": 1,
+      "pages": [
+        60
+      ],
+      "raw_text": "RFD3R3V"
+    },
+    "RFA3R3V": {
+      "count": 1,
+      "pages": [
+        60
+      ],
+      "raw_text": "RFA3R3V"
+    },
+    "LRB551V": {
+      "count": 1,
+      "pages": [
+        63
+      ],
+      "raw_text": "LRB551V"
+    },
+    "2.5V": {
+      "count": 1,
+      "pages": [
+        63
+      ],
+      "raw_text": "2.5V"
+    },
+    "1.2V": {
+      "count": 1,
+      "pages": [
+        63
+      ],
+      "raw_text": "1.2V"
+    },
+    "F1R2V": {
+      "count": 1,
+      "pages": [
+        68
+      ],
+      "raw_text": "F1R2V"
+    },
+    "R3V": {
+      "count": 1,
+      "pages": [
+        68
+      ],
+      "raw_text": "R3V"
+    }
+  }
+}

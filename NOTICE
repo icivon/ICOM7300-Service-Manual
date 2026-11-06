@@ -1,0 +1,63 @@
+IC-7300 SERVICE ASSISTANT - NOTICE
+
+1. Source and ownership
+   Derived from "IC-7300 SERVICE MANUAL", document S-15218XZ-C1,
+   Icom Inc., March 2016 (75 pages, Adobe InDesign CS6 / PDF/X-1a).
+   The manual, its schematics, part numbers and text remain the property of
+   Icom Inc. This project is not affiliated with or endorsed by Icom Inc.
+
+2. What is NOT included
+   The original PDF is NOT included in this package. No schematic page images,
+   no board-layout images and no page-by-page verbatim text dumps are included.
+   Page numbers in the data refer to the user's own lawfully obtained copy.
+
+3. Why
+   The source PDF is encrypted with an empty user password and permission bits
+   P=-1324: printing and text extraction are permitted, while modification,
+   annotation and document assembly (splitting/recombining pages) are denied.
+   Redistributing rebuilt or extracted PDF pages would violate those permissions
+   and the copyright in the drawings.
+
+4. What IS included
+   Structured, derived data: designator indexes, part-number/description fields,
+   board coordinates, signal-chain ordering, fault-tree reasoning, page-number
+   references, and SHORT single-line quotations attached to individual records
+   solely so that a numeric value or designator can be verified against the
+   source manual. Coverage labels identify the provenance of every record:
+     manual         - verbatim short quote from the PDF text layer
+     derived        - engineering inference built on manual evidence
+     not_in_manual  - requested data absent from the manual
+
+5. Accuracy and limitations
+   The manual contains no troubleshooting section, no component-level DC
+   voltage table, no waveforms and no tolerance specifications. Values that
+   are absent are represented as null and labelled "not_in_manual"; they must
+   not be filled with assumed figures. Power-net labels such as 14V, 8V, 5V,
+   3R3V are NET NAMES; any nominal voltage derived from a name is explicitly
+   flagged as inferred and is not a measured value or a tolerance.
+
+6. Warranty / safety
+   Provided "as is" for informational repair assistance only. It does not
+   replace the official service manual, calibrated test equipment or qualified
+   technical judgement. Transmitter servicing involves RF energy and mains/DC
+   power: follow the manufacturer's safety instructions and applicable local
+   regulations. The authors assume no liability for damage or injury.
+
+7. Liability undertaking / 免责承诺 / 免責承諾
+   The Skill and tools provide TECHNICAL REFERENCE ONLY. They do not
+   constitute a repair diagnosis, an instruction to act, or a substitute for
+   the official service manual. The provider accepts no responsibility for
+   equipment damage, personal injury, or financial loss caused by incorrect
+   technical judgement, misuse, or decisions based on this material. The user
+   must assess the actual fault independently, using qualified personnel,
+   the official manual and measured data.
+
+   ZH：本 Skill 与相关工具仅提供技术参考，不构成维修结论。因技术判断错误、
+   误操作或依据本资料作出决定而造成的设备损坏、人身伤害或经济损失，提供者
+   不承担任何责任。实际故障请由具备资质的人员结合官方手册与实测数据自行判断。
+
+   JA：本 Skill および関連ツールは技術参考資料のみを提供し、修理上の結論を
+   示すものではありません。技術的判断の誤り、誤操作、または本資料に基づく
+   判断により生じた機器の損傷、人身事故、経済的損失について、提供者は一切の
+   責任を負いません。実際の故障は、資格を有する技術者が公式サービスマニュアル
+   と実測データに基づき自ら判断してください。
