@@ -1,8 +1,8 @@
 {
   "package": "icom7300-assistant.zip",
   "schema_version": "1.0.0",
-  "built_at": "2026-11-06T08:38:33+00:00",
-  "file_count": 67,
+  "built_at": "2026-11-06T09:16:06+00:00",
+  "file_count": 69,
   "includes_original_pdf": false,
   "includes_page_text_dumps": false,
   "excluded_manifests": [
@@ -24,6 +24,7 @@
     "icom7300-assistant/.codebuddy/skills/icom-7300/references/tuner-and-frequency.md",
     "icom7300-assistant/.codebuddy/skills/icom-7300/references/tx-power.md",
     "icom7300-assistant/.codebuddy/skills/icom-7300/references/usb-and-control.md",
+    "icom7300-assistant/.codebuddy/skills/icom-7300/scripts/query.py",
     "icom7300-assistant/NOTICE",
     "icom7300-assistant/README.en.md",
     "icom7300-assistant/README.ja.md",
@@ -64,6 +65,7 @@
     "icom7300-assistant/skill/icom-7300/references/tuner-and-frequency.md",
     "icom7300-assistant/skill/icom-7300/references/tx-power.md",
     "icom7300-assistant/skill/icom-7300/references/usb-and-control.md",
+    "icom7300-assistant/skill/icom-7300/scripts/query.py",
     "icom7300-assistant/tools/build_db.py",
     "icom7300-assistant/tools/build_dist.py",
     "icom7300-assistant/tools/build_fault_tree.py",

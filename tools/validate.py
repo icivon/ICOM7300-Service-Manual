@@ -231,6 +231,20 @@ class Validator:
         src_refs = {p.name: p.read_bytes() for p in (src / "references").glob("*.md")}
         cb_refs = {p.name: p.read_bytes() for p in (cb / "references").glob("*.md")}
         self.check(bool(src_refs) and src_refs == cb_refs, "codebuddy.refs_sync", "references differ from source")
+        # The Skill must be able to query the dataset on its own: ship the
+        # zero-dependency script in both layouts and keep the two in sync.
+        src_scripts = {p.name: p.read_bytes() for p in (src / "scripts").glob("*.py")}
+        cb_scripts_dir = cb / "scripts"
+        cb_scripts = {p.name: p.read_bytes() for p in cb_scripts_dir.glob("*.py")} if cb_scripts_dir.is_dir() else {}
+        self.check("query.py" in src_scripts, "codebuddy.script_present", "skill/icom-7300/scripts/query.py missing")
+        self.check(bool(src_scripts) and src_scripts == cb_scripts, "codebuddy.script_sync", "query script drifted between source and CodeBuddy copy")
+        for name, blob in src_scripts.items():
+            try:
+                compile(blob, name, "exec")
+                ok = True
+            except SyntaxError:
+                ok = False
+            self.check(ok, "codebuddy.script_syntax", f"{name}: invalid Python")
 
     def validate_distribution(self) -> None:
         dist = DATA / "dist"

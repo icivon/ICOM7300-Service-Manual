@@ -9,6 +9,7 @@ Usage: python tools/verify_dist.py
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 import tempfile
 import zipfile
@@ -71,6 +72,35 @@ def main() -> int:
             )
             check((base / ".codebuddy" / "skills" / "icom-7300" / "references" / "i18n.md").exists(), "CodeBuddy references shipped")
             check((base / "tools" / "install_skill.py").exists(), "skill installer shipped")
+
+            # The Skill must be usable without any IDE/MCP configuration: verify
+            # the bundled script really queries the unpacked SQLite database.
+            skill_script = base / "skill" / "icom-7300" / "scripts" / "query.py"
+            cb_script = base / ".codebuddy" / "skills" / "icom-7300" / "scripts" / "query.py"
+            check(skill_script.exists(), "offline query script shipped")
+            check(
+                cb_script.exists() and skill_script.exists() and cb_script.read_bytes() == skill_script.read_bytes(),
+                "CodeBuddy query script shipped and in sync",
+            )
+            check(
+                "scripts/query.py" in (skill.read_text(encoding="utf-8") if skill.exists() else ""),
+                "SKILL.md documents the offline query script",
+            )
+            if skill_script.exists():
+                proc = subprocess.run(
+                    [sys.executable, str(skill_script), "ref", "DS1"],
+                    capture_output=True, text=True, encoding="utf-8", errors="replace",
+                )
+                ok = proc.returncode == 0
+                if ok:
+                    try:
+                        payload = json.loads(proc.stdout)
+                        ok = payload.get("count") == 2 and {
+                            r["board"] for r in payload["results"]
+                        } == {"FRONT UNIT", "DISPLAY UNIT"}
+                    except (ValueError, KeyError, TypeError):
+                        ok = False
+                check(ok, "unpacked query script returns exact designator evidence", (proc.stderr or "")[-200:])
 
             val = json.loads((base / "data" / "manifest" / "validation.json").read_text(encoding="utf-8"))
             check(val.get("ok") is True and val.get("error_count") == 0, "shipped validation report clean")

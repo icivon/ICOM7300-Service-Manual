@@ -1,5 +1,5 @@
 {
-  "skill_md_bytes": 4805,
+  "skill_md_bytes": 7005,
   "references": [
     "component-lookup.md",
     "i18n.md",
@@ -33,7 +33,11 @@
     "references/signal-chain.md",
     "references/tuner-and-frequency.md",
     "references/tx-power.md",
-    "references/usb-and-control.md"
+    "references/usb-and-control.md",
+    "scripts/query.py"
   ],
-  "standard": "CodeBuddy Skills / Agent Skills (SKILL.md + references/)"
+  "scripts": [
+    "query.py"
+  ],
+  "standard": "CodeBuddy Skills / Agent Skills (SKILL.md + references/ + scripts/)"
 }

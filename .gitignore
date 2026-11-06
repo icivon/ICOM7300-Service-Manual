@@ -21,6 +21,7 @@ Thumbs.db
 !.codebuddy/skills/
 .codebuddy/skills/*
 !.codebuddy/skills/icom-7300/
+!.codebuddy/rules/
 
 # Local scratch files
 *.log
